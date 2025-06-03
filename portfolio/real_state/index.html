@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Buenos Aires | Propiedades Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center mr-2">
+                    <i class="fas fa-building text-white text-xl"></i>
+                </div>
+                <h1 class="text-2xl font-bold">
+                    <span class="text-black">Vista</span>
+                    <span class="text-orange-500">BuenosAires</span>
+                </h1>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-black hover:text-orange-500 font-medium transition">Inicio</a>
+                <a href="#propiedades" class="text-black hover:text-orange-500 font-medium transition">Propiedades</a>
+                <a href="#servicios" class="text-black hover:text-orange-500 font-medium transition">Servicios</a>
+                <a href="#nosotros" class="text-black hover:text-orange-500 font-medium transition">Nosotros</a>
+                <a href="#contacto" class="text-black hover:text-orange-500 font-medium transition">Contacto</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-black focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 p-6">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl font-bold text-orange-500">Menú</h2>
+                <button id="close-menu" class="text-black text-2xl focus:outline-none">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4">
+                <a href="#inicio" class="text-black hover:text-orange-500 font-medium py-2 transition">Inicio</a>
+                <a href="#propiedades" class="text-black hover:text-orange-500 font-medium py-2 transition">Propiedades</a>
+                <a href="#servicios" class="text-black hover:text-orange-500 font-medium py-2 transition">Servicios</a>
+                <a href="#nosotros" class="text-black hover:text-orange-500 font-medium py-2 transition">Nosotros</a>
+                <a href="#contacto" class="text-black hover:text-orange-500 font-medium py-2 transition">Contacto</a>
+                <a href="#" class="bg-orange-500 text-white px-4 py-2 rounded-full font-medium text-center mt-4 hover:bg-orange-600 transition">Contactar</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-black text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+        <div class="container mx-auto px-4 py-24 md:py-32 relative z-20">
+            <div class="max-w-2xl fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-orange-500">Encuentra</span> tu hogar ideal en Buenos Aires
+                </h1>
+                <p class="text-lg mb-8 opacity-90">
+                    Más de 15 años ayudando a familias y profesionales a encontrar propiedades exclusivas en los mejores barrios de la ciudad.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#propiedades" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-center transition delay-1">
+                        Ver propiedades
+                    </a>
+                    <a href="#contacto" class="border border-white hover:bg-white hover:text-black text-white px-6 py-3 rounded-full font-medium text-center transition delay-2">
+                        Contactar asesor
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Background Slider -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div id="hero-slider" class="h-full w-full flex">
+                <div class="property-slider min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                <div class="property-slider min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                <div class="property-slider min-w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="propiedades" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Propiedades <span class="text-orange-gradient">Destacadas</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Descubre nuestras selección de propiedades premium en los barrios más exclusivos de Buenos Aires.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in delay-1">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="./images/property_1.avif" 
+                             alt="Casa en Palermo" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Venta
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Casa moderna en Palermo</h3>
+                            <span class="text-orange-500 font-bold">$850,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Palermo, Buenos Aires</p>
+                        <div class="flex space-x-4 text-gray-500 mb-4">
+                            <span class="flex items-center"><i class="fas fa-bed mr-1"></i> 4</span>
+                            <span class="flex items-center"><i class="fas fa-bath mr-1"></i> 3</span>
+                            <span class="flex items-center"><i class="fas fa-ruler-combined mr-1"></i> 220m²</span>
+                        </div>
+                        <a href="#" class="block text-center bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium transition">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in delay-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="./images/property_2.avif" 
+                             alt="Departamento en Recoleta" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-black text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Alquiler
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Departamento en Recoleta</h3>
+                            <span class="text-orange-500 font-bold">$1,200/mes</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Recoleta, Buenos Aires</p>
+                        <div class="flex space-x-4 text-gray-500 mb-4">
+                            <span class="flex items-center"><i class="fas fa-bed mr-1"></i> 3</span>
+                            <span class="flex items-center"><i class="fas fa-bath mr-1"></i> 2</span>
+                            <span class="flex items-center"><i class="fas fa-ruler-combined mr-1"></i> 150m²</span>
+                        </div>
+                        <a href="#" class="block text-center bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium transition">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover-scale fade-in delay-3">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="./images/property_3.avif" 
+                             alt="Penthouse en Puerto Madero" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                        <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Venta
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold">Penthouse en Puerto Madero</h3>
+                            <span class="text-orange-500 font-bold">$1,250,000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Puerto Madero, Buenos Aires</p>
+                        <div class="flex space-x-4 text-gray-500 mb-4">
+                            <span class="flex items-center"><i class="fas fa-bed mr-1"></i> 4</span>
+                            <span class="flex items-center"><i class="fas fa-bath mr-1"></i> 3</span>
+                            <span class="flex items-center"><i class="fas fa-ruler-combined mr-1"></i> 280m²</span>
+                        </div>
+                        <a href="#" class="block text-center bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full font-medium transition">
+                            Ver detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="#" class="inline-block border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-6 py-3 rounded-full font-medium transition">
+                    Ver todas las propiedades
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="servicios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Nuestros <span class="text-orange-gradient">Servicios</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Ofrecemos soluciones integrales para todas tus necesidades inmobiliarias.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale fade-in delay-1 hover:shadow-lg">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-home text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Compra y Venta</h3>
+                    <p class="text-gray-600">
+                        Te ayudamos a encontrar la propiedad perfecta o a vender tu propiedad al mejor precio del mercado.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale fade-in delay-2 hover:shadow-lg">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-key text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Alquileres</h3>
+                    <p class="text-gray-600">
+                        Amplia selección de propiedades en alquiler en los mejores barrios de Buenos Aires.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale fade-in delay-3 hover:shadow-lg">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Asesoría Inmobiliaria</h3>
+                    <p class="text-gray-600">
+                        Asesoramiento profesional para inversiones inmobiliarias y análisis de mercado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Sobre <span class="text-orange-gradient">Nosotros</span>
+                    </h2>
+                    <p class="text-gray-600 mb-4">
+                        Vista Buenos Aires es una agencia inmobiliaria con más de 15 años de experiencia en el mercado, especializada en propiedades premium en los barrios más exclusivos de la ciudad.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Nuestro equipo de profesionales altamente capacitados está comprometido con brindar un servicio personalizado y de excelencia, asegurando que cada cliente encuentre exactamente lo que busca.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-500">15+</div>
+                            <div class="text-gray-600">Años de experiencia</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-500">500+</div>
+                            <div class="text-gray-600">Propiedades vendidas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-orange-500">100%</div>
+                            <div class="text-gray-600">Clientes satisfechos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative fade-in delay-1">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg">
+                        <img src="./images/team.avif" 
+                             alt="Equipo de Vista Buenos Aires" class="w-full h-auto">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <h3 class="text-white text-xl font-bold">Nuestro equipo de expertos</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Lo que dicen <span class="text-orange-gradient">nuestros clientes</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    La satisfacción de nuestros clientes es nuestra mayor recompensa.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale fade-in delay-1 hover:shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-orange-500 text-2xl mr-2">"</div>
+                        <p class="text-gray-600 italic">
+                            Excelente servicio! Encontraron exactamente lo que buscaba en Palermo. Muy profesionales y atentos a todos los detalles.
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente satisfecho" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">María González</h4>
+                            <p class="text-gray-500 text-sm">Compradora en Palermo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale fade-in delay-2 hover:shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-orange-500 text-2xl mr-2">"</div>
+                        <p class="text-gray-600 italic">
+                            Vendí mi departamento en Recoleta en tiempo récord y al mejor precio del mercado. Totalmente recomendados!
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente satisfecho" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Juan Pérez</h4>
+                            <p class="text-gray-500 text-sm">Vendedor en Recoleta</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-scale fade-in delay-3 hover:shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-orange-500 text-2xl mr-2">"</div>
+                        <p class="text-gray-600 italic">
+                            Como inversor extranjero, me asesoraron perfectamente sobre el mercado local. Hice una excelente inversión en Puerto Madero.
+                        </p>
+                    </div>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cliente satisfecho" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Robert Johnson</h4>
+                            <p class="text-gray-500 text-sm">Inversor en Puerto Madero</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contacto" class="py-16 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        <span class="text-orange-500">Contáctanos</span>
+                    </h2>
+                    <p class="text-gray-300 mb-8">
+                        Estamos aquí para ayudarte a encontrar tu propiedad ideal o para asesorarte en cualquier consulta inmobiliaria.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-orange-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Oficina Central</h4>
+                                <p class="text-gray-300">Av. Libertador 1234, Buenos Aires</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Teléfono</h4>
+                                <p class="text-gray-300">+54 11 1234-5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-500 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="cursor-pointer text-gray-300 hover:underline">info@vistabsas.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-800 hover:bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-orange-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 fade-in delay-1">
+                    <form class="bg-white text-black rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Envíanos un mensaje</h3>
+                        
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-lg transition">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center mr-2">
+                            <i class="fas fa-building text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">
+                            <span class="text-white">Vista</span>
+                            <span class="text-orange-500">BuenosAires</span>
+                        </h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Tu socio confiable en el mercado inmobiliario de Buenos Aires desde 2008.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-orange-500 transition">Inicio</a></li>
+                        <li><a href="#propiedades" class="text-gray-400 hover:text-orange-500 transition">Propiedades</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-orange-500 transition">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-orange-500 transition">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-orange-500 transition">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Barrios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Palermo</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Recoleta</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Puerto Madero</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Belgrano</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-orange-500 transition">Núñez</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Suscríbete para recibir las últimas propiedades y noticias del mercado.
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="Tu email" class="px-4 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none w-full">
+                        <button class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    &copy; 2025 Francisco Fernández. Todos los derechos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-orange-500 transition">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

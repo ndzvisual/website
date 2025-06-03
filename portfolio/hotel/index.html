@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palacio Dorado | Luxury Hotel in Buenos Aires</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+        :root {
+            --gold: #ECA72C;
+            --blue: #183059;
+            --black: #272727;
+            --grey: #2F2F2F;
+            --white: #EEE5E9;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--white);
+            color: var(--white);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.8)),
+                url('https://source.unsplash.com/random/1920x1080/?buenos-aires,hotel,lobby') center/cover no-repeat;
+            z-index: -2;
+            transform: translateZ(-1px) scale(1.2);
+        }
+
+        .gold-text {
+            color: var(--gold);
+        }
+
+        .blue-text {
+            color: var(--blue);
+        }
+
+        .gold-border {
+            border-color: var(--gold);
+        }
+
+        .blue-border {
+            border-color: var(--blue);
+        }
+
+        .room-slider {
+            transition: transform 0.5s ease;
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .service-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--gold), var(--blue));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .section-divider {
+            height: 150px;
+            width: 100%;
+            background: linear-gradient(to bottom, transparent, var(--black));
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--gold), var(--blue), transparent);
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: var(--gold);
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .parallax {
+                background-attachment: scroll;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#ECA72C',
+              light: '#FFD57E',
+              dark: '#B67B1A',
+            },
+            blue: {
+              DEFAULT: '#183059',
+              light: '#355070',
+              dark: '#0D1B2A',
+            },
+            black: '#272727',
+            'section-background': '#2F2F2F',
+            white: '#F8F0FB',
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black bg-opacity-40 backdrop-filter backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-serif font-bold">
+                    <span class="gold-text">Palacio</span>
+                    <span class="blue-text">Dorado</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white">Inicio</a>
+                    <a href="#rooms" class="nav-link text-white">Habitaciones</a>
+                    <a href="#services" class="nav-link text-white">Servicios</a>
+                    <a href="#contact" class="nav-link text-white">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#reservation"
+                        class="px-4 py-2 bg-gradient-to-r from-blue-800 to-blue-600 rounded-full font-medium hover:opacity-90 transition-all">
+                        Reservá ahora
+                    </a>
+                    <div class="md:hidden">
+                        <button class="text-white focus:outline-none">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="hero flex items-center justify-center relative inset-0 bg-cover bg-center bg-no-repeat bg-black bg-opacity-80 z-0"
+        style="background-image: url('./images/baires.jpeg');">
+        <div class="hero-bg parallax"></div>
+
+        <div class="container mx-auto px-6 z-10">
+            <div class="text-center">
+                <h1 class="hero-title text-5xl md:text-7xl font-bold mb-6">
+                    <span class="gold-text">Palacio</span>
+                    <span class="blue-text">Dorado</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-serif italic">
+                    Donde el lujo y la noche se encuentran
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#rooms"
+                        class="px-8 py-3 border-2 gold-border rounded-full font-bold hover:bg-opacity-20 hover:bg-yellow-900 transition-all duration-300">
+                        Conocé nuestras habitaciones
+                    </a>
+                    <a href="#reservation"
+                        class="px-8 py-3 bg-gradient-to-r from-blue-700 to-blue-900 rounded-full font-bold hover:opacity-90 transition-all duration-300">
+                        Hacé una reserva
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce">
+            <a href="#rooms" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="flex py-20 relative">        
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">
+                    <span class="gold-text">Habitaciones</span>
+                    <span class="blue-text">de lujo</span>
+                </h2>
+                <p class="text-xl max-w-2xl mx-auto text-black">
+                    Experimentá todo el confort y la privacidad en nuestras habitaciones y suites
+                </p>
+            </div>
+
+            <!-- Room Slider -->
+            <div class="relative overflow-hidden rounded-xl shadow-2xl mb-12">
+                <div class="room-slider flex transition-transform duration-500 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="w-full flex-shrink-0 h-96 md:h-screen/70 relative">
+                        <img src="./images/arabe_suite.jpeg" alt="Presidential Suite"
+                            class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent">
+                            <h3 class="text-3xl font-bold mb-2 font-serif gold-text">Suite Árabe</h3>
+                            <p class="mb-4 max-w-lg">La más lujosa. Hidromasaje, sauna, pantalla de 55" y una cama queen
+                                size para que puedas dar rienda suelta a tu imaginación</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center gold-text">
+                                    <i class="fas fa-ruler-combined mr-2"></i> 120 m²
+                                </span>
+                                <span class="flex items-center gold-text">
+                                    <i class="fas fa-bed mr-2"></i> Cama Queen Size
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="w-full flex-shrink-0 h-96 md:h-screen/70 relative">
+                        <img src="./images/deluxe_suite.jpeg" alt="Deluxe Room" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent">
+                            <h3 class="text-3xl font-bold mb-2 font-serif gold-text">Suite Deluxe</h3>
+                            <p class="mb-4 max-w-lg">Ideal para ese encuentro que esperás desde hace tiempo. Cama king
+                                size, hidromasajae y pantalla de 42"</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center gold-text">
+                                    <i class="fas fa-ruler-combined mr-2"></i> 45 m²
+                                </span>
+                                <span class="flex items-center gold-text">
+                                    <i class="fas fa-bed mr-2"></i> Cama King Size
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="w-full flex-shrink-0 h-96 md:h-screen/70 relative">
+                        <img src="./images/ejecutiva_suite.jpeg" alt="Executive Suite"
+                            class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black to-transparent">
+                            <h3 class="text-3xl font-bold mb-2 font-serif gold-text">Suite Ejecutiva</h3>
+                            <p class="mb-4 max-w-lg">Cama king size y televisión de 42" para pasar las mejores horas en
+                                pareja</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="flex items-center gold-text">
+                                    <i class="fas fa-ruler-combined mr-2"></i> 65 m²
+                                </span>
+                                <span class="flex items-center gold-text">
+                                    <i class="fas fa-bed mr-2"></i> Cama King Size
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider Controls -->
+                <div class="absolute top-1/2 left-4 transform -translate-y-1/2">
+                    <button onclick="prevSlide()"
+                        class="bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+                <div class="absolute top-1/2 right-4 transform -translate-y-1/2">
+                    <button onclick="nextSlide()"
+                        class="bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Slider Dots -->
+                <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#reservation"
+                    class="px-8 py-3 bg-gradient-to-r from-blue-700 to-blue-900 rounded-full font-bold hover:opacity-90 transition-all duration-300 inline-flex items-center">
+                    Consultá disponibilidad
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Bento Grid -->
+    <section id="services" class="flex py-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-dark to-black"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">
+                    <span class="gold-text">Servicios</span>
+                    <span class="blue-text">Excepcionales</span>
+                </h2>
+                <p class="text-xl max-w-2xl mx-auto text-black">
+                    Acompañá tu estadía con los mejores servicios a tu disposición
+                </p>
+            </div>
+
+            <div class="bento-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card rounded-xl overflow-hidden h-64 md:h-80 relative"
+                    style="background: url('./images/bar.jpeg') center/cover;">
+                    <div class="service-content absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-2xl font-bold mb-2 font-serif gold-text">Bar & restaurant</h3>
+                        <p class="mb-4">Pedí lo que quieras de nuestro menú y te lo llevamos a la habitación</p>
+                        <a href="#" class="text-sm gold-text hover:underline flex items-center">
+                            Ver menú
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card rounded-xl overflow-hidden h-64 md:h-80 relative"
+                    style="background: url('./images/concierge.jpeg') center/cover;">
+                    <div class="service-content absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-2xl font-bold mb-2 font-serif gold-text">Recepción 24 horas</h3>
+                        <p class="mb-4">Contamos con personal las 24 horas los 7 días de la seamana dispuestos a
+                            ayudarte en todo momento</p>
+                        <a href="#" class="text-sm gold-text hover:underline flex items-center">
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card rounded-xl overflow-hidden h-64 md:h-80 relative"
+                    style="background: url('./images/wifi.jpeg') center/cover;">
+                    <div class="service-content absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-2xl font-bold mb-2 font-serif gold-text">WiFi Gratis</h3>
+                        <p class="mb-4">Conexión WiFi de alta velocidad en todo el hotel</p>
+                        <a href="#" class="text-sm gold-text hover:underline flex items-center">
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card rounded-xl overflow-hidden h-64 md:h-80 relative"
+                    style="background: url('./images/telephone.jpeg') center/cover;">
+                    <div class="service-content absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-2xl font-bold mb-2 font-serif gold-text">Teléfono privado</h3>
+                        <p class="mb-4">Todas las habitaciones cuentan con teléfono para llamadas con número oculto</p>
+                        <a href="#" class="text-sm gold-text hover:underline flex items-center">
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card rounded-xl overflow-hidden h-64 md:h-80 relative"
+                    style="background: url('./images/confidential.jpeg') center/cover;">
+                    <div class="service-content absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-2xl font-bold mb-2 font-serif gold-text">Confidencialidad 100%</h3>
+                        <p class="mb-4">¿Pagás con tarjeta o transferencia? No te preocupes, el nombre del hotel no
+                            figura en el resúmen de movimientos</p>
+                        <a href="#" class="text-sm gold-text hover:underline flex items-center">
+
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card rounded-xl overflow-hidden h-64 md:h-80 relative"
+                    style="background: url('./images/toy.jpeg') center/cover;">
+                    <div class="service-content absolute bottom-0 left-0 p-6 w-full">
+                        <h3 class="text-2xl font-bold mb-2 font-serif gold-text">Juguetes y accesorios</h3>
+                        <p class="mb-4">Tenemos una ampia gama de juguetes y accesorios disponibles para ponerle más
+                            picante a tu estadía</p>
+                        <a href="#" class="text-sm gold-text hover:underline flex items-center">
+                            Ver catálogo
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dining Section -->
+    <section id="dining" class="flex py-20 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-blue-dark to-black"></div>
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-blue-700 to-gold-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-200">
+                        </div>
+                        <img src="./images/food.jpeg" alt="Our Restaurant" class="relative rounded-lg w-full">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 font-serif">
+                        <span class="gold-text">Calidad</span>
+                        <span class="blue-text">Gastronómica</span>
+                    </h2>
+                    <p class="mb-6 text-lg text-black">
+                        A diferencia de otros hoteles, nosotros contamos no solo con cafetería si no con un resturant a
+                        la carta directo a la habitación.
+                    </p>
+                    <p class="mb-6 text-lg text-black">
+                        Carnes, platos vegetarianos y una carta apta celíacos son algunas de las opciones que tenemos a
+                        disposición de nuestros huéspedes.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="px-4 py-2 bg-transparent rounded-full border border-blue-500">
+                            <span class="gold-text">Desayuno: 6:00 - 11:00</span>
+                        </div>
+                        <div class="px-4 py-2 bg-transparent rounded-full border border-blue-500">
+                            <span class="gold-text">Almuerzo: 12:00 - 15:00</span>
+                        </div>
+                        <div class="px-4 py-2 bg-transparent rounded-full border border-blue-500">
+                            <span class="gold-text">Cena: 8:00 - 00:00</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#"
+                            class="px-6 py-2 bg-black-100/50 rounded-full border border-black-500 font-medium gold-text hover:bg-cyan-900 hover:bg-opacity-30 hover:text-white transition-all inline-flex items-center">
+                            Ver menú
+                            <i class="fas fa-utensils ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="flex py-20 relative">
+        <div class="container mx-auto px-6">
+            <div
+                class="max-w-4xl mx-auto bg-gray-800 bg-opacity-10 rounded-xl p-8 md:p-12 backdrop-filter backdrop-blur-sm border shadow-lg mb-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 font-serif">
+                        <span class="gold-text">Reservá</span>
+                        <span class="blue-text">Tu Habitación</span>
+                    </h2>
+                    <p class="text-lg text-black">
+                        Completá el formulario y nos ponemos en contacto con vos
+                    </p>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="res-name" class="block mb-2 text-sm font-medium text-black">Nombre</label>
+                            <input type="text" id="res-name"
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500">
+                        </div>
+                        <div>
+                            <label for="res-email" class="block mb-2 text-sm font-medium text-black">Correo</label>
+                            <input type="email" id="res-email"
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <label for="check-in" class="block mb-2 text-sm font-medium text-black">Ingreso</label>
+                            <input type="date" id="check-in"
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500">
+                        </div>
+                        <div>
+                            <label for="check-out" class="block mb-2 text-sm font-medium text-black">Egreso</label>
+                            <input type="date" id="check-out"
+                                class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="room-type" class="block mb-2 text-sm font-medium text-black">Habitación</label>
+                        <select id="room-type"
+                            class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="deluxe">Suite Deluxe</option>
+                            <option value="executive">Suite Ejecutiva</option>
+                            <option value="presidential">Suite Árabe</option>
+                            <option value="other">Otra (especificar)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-3 bg-gradient-to-r from-blue-800 to-blue-600 rounded-lg font-bold hover:opacity-90 transition-all">
+                        Enviar pedido de reserva
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="flex py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 font-serif">
+                    <span class="gold-text">Contactanos</span>
+                </h2>
+                <p class="text-xl max-w-2xl mx-auto">
+                    Nos encata saber qué piensan de nosotros. Contactanos si tenés algún comentario, queja o sugerencia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Contact 1 -->
+                <div class="bg-gray-900 rounded-xl p-8 text-center hover:bg-opacity-80 hover:shadow-xl transition-all">
+                    <div class="text-3xl mb-4 gold-text">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-serif">Dirección</h3>
+                    <p class="text-gray-300">
+                        Avenida Alvear 1891<br>
+                        Recoleta, Buenos Aires<br>
+                        Argentina
+                    </p>
+                </div>
+
+                <!-- Contact 2 -->
+                <div class="bg-gray-900 rounded-xl p-8 text-center hover:bg-opacity-80 hover:shadow-xl transition-all">
+                    <div class="text-3xl mb-4 gold-text">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-serif">Teléfono</h3>
+                    <p class="text-gray-300">
+                        +54 11 1234-5678<br>
+                    </p>
+                </div>
+
+                <!-- Contact 3 -->
+                <div class="bg-gray-900 rounded-xl p-8 text-center hover:bg-opacity-80 hover:shadow-xl transition-all">
+                    <div class="text-3xl mb-4 gold-text">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 font-serif">Email</h3>
+                    <p class="text-gray-300">
+                        reservas@palaciodorado.com<br>
+                        info@palaciodorado.com<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-serif font-bold mb-4">
+                        <span class="gold-text">Palacio</span>
+                        <span class="blue-text">Dorado</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Donde el lujo y la noche se encuentran
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 font-serif gold-text">Enlaces</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="#rooms" class="text-gray-400 hover:text-white transition">Habitaciones</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Servicios</a></li>
+                        <li><a href="#dining" class="text-gray-400 hover:text-white transition">Empleos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4 font-serif gold-text">Seguínos</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">
+                        Suscribite a nuestro newsletter para estar atento a novedades y promociones
+                    </p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Tu correo"
+                            class="px-3 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none w-full">
+                        <button class="px-4 py-2 bg-blue-700 text-white rounded-r-lg hover:bg-blue-600 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
+                &copy; 2025 Palacio Dorado. All rights reserved. Diseño: NDZ Visual
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Room Slider Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.room-slider > div');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            const slider = document.querySelector('.room-slider');
+            slider.style.transform = `translateX(-${index * 100}%)`;
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto-advance slides every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // Initialize slider
+        showSlide(0);
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.pageYOffset;
+            const heroBg = document.querySelector('.hero-bg');
+
+            if (heroBg) {
+                heroBg.style.transform = `translateZ(-1px) scale(${1 + scrollPosition * 0.0005})`;
+            }
+        });
+    </script>
+</body>
+
+</html>

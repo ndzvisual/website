@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophia - Tu comfort diario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Sophia</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#products">Productos</a></li>
+                    <li><a href="#instagram">Galería</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>LA MEJOR MANERA DE ESTAR CÓMODA</h1>
+                <a href="#products" class="cta-button">ver productos</a>
+            </div>
+        </section>
+
+        <!-- Product Slider Section -->
+        <section id="products" class="container section-padding">
+            <h2>Nuestros productos</h2>
+            <div class="product-slider">
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <img src="./img/classic_briefs.webp" alt="Product0 1">
+                        <h3>Classic Briefs</h3>
+                        <p>$19.99</p>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/classic_boxers.jpg" alt="Product 2">
+                        <h3>Comfort Boxers</h3>
+                        <p>$24.99</p>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/sport_trunks.jpg" alt="Product 3">
+                        <h3>Sport Trunks</h3>
+                        <p>$22.50</p>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/lace_bralette.jpg" alt="Product 4">
+                        <h3>Lace Bralette</h3>
+                        <p>$29.00</p>
+                    </div>
+                    <div class="slide">
+                        <img src="./img/silk_panty.webp" alt="Product 5">
+                        <h3>Silk Panty</h3>
+                        <p>$18.00</p>
+                    </div>
+                </div>
+                <button class="slider-nav prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-nav next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Instagram Feed Section -->
+        <section id="instagram" class="section-padding">
+            <div class="container">
+                <h2>#ComfyClosetGirls</h2>
+                <p>Mirá nuestra comunidad y sus looks! Etiquetános en <a href="">@Comfycloset_ar</a>!</p>
+                <div class="instagram-grid">
+                    <div class="insta-item"><img src="./img/insta_1.webp" alt="Instagram Post 1"></div>
+                    <div class="insta-item"><img src="./img/insta_2.webp" alt="Instagram Post 2"></div>
+                    <div class="insta-item"><img src="./img/insta_3.jfif" alt="Instagram Post 3"></div>
+                    <div class="insta-item"><img src="./img/insta_4.webp" alt="Instagram Post 4"></div>
+                    <div class="insta-item"><img src="./img/insta_5.jpg" alt="Instagram Post 5"></div>
+                    <div class="insta-item"><img src="./img/insta_6.jpg" alt="Instagram Post 6"></div>
+                </div>
+                <div class="text-center" style="margin-top: 20px;">
+                    <a href="https://instagram.com" target="_blank" class="cta-button secondary">Seguínos en Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section id="contact" class="container section-padding">
+            <h2>Estemos en contacto</h2>
+            <p>¿Tenés alguna pregunta o nos querés decir algo? Llená el formulario y te respondemos al toque</p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Enviar</button>
+            </form>
+            <div id="form-status" class="form-status"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Sohpia</h3>
+                    <p>La mejor ropa interior y lencería desde donde estés</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#instagram">Galería</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Nuestras redes</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Diseñado por NDZ VISUAL. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/YOURPHONENUMBER?text=Hello%20ComfyCloset!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

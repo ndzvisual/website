@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara - Wellness and health template</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Clara Template</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- MENU -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="fade-in-element">
+        <div class="container hero-content">
+            <h1>Transform your relationship with food and achieve your wellness goals</h1>
+            <p>Clara is a template designed for health, physical and emotional well-being professionals.</p>
+        </div>
+    </section>
+
+    <!-- SERVICIOS / SERVICES -->
+    <section id="services" class="container section-padding">
+        <h2 class="fade-in-element">Services</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card fade-in-element">
+                <i class="fas fa-apple-alt"></i>
+                <h3>Custom Colors</h3>
+                <p>You can edit the site colors directly in the CSS using the variables already created.</p>
+            </div>
+            <div class="servicio-card fade-in-element">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Use Ready</h3>
+                <p>Written in HTML, CSS, and JavaScript so you can edit and use it immediately without complex configurations.</p>
+            </div>
+            <div class="servicio-card fade-in-element">
+                <i class="fas fa-seedling"></i>
+                <h3>Fully Responsive</h3>
+                <p>TCreated to look optimal on all available screen sizes.</p>
+            </div>
+            <div class="servicio-card fade-in-element">
+                <i class="fas fa-comments"></i>
+                <h3>Consultoría Online</h3>
+                <p>Asesoramiento nutricional desde la comodidad de tu hogar, estés donde estés.</p>
+            </div>
+        </div>
+        <div class="cta-button-container fade-in-element">
+            <a href="#contacto" class="cta-button">Sacar Turno</a>
+        </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section id="instagram" class="section-padding">
+        <div class="container">
+            <h2 class="fade-in-element">Follow me on Instagram <a href="https://www.instagram.com/ndz.visual" target="_blank">@mfernutri</a></h2>
+            <div class="instagram-grid fade-in-element">
+                <div class="insta-post"><img src="./assets/img/1.webp" alt="Post Instagram 1" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/2.webp" alt="Post Instagram 2" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/3.png" alt="Post Instagram 3" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/4.jpg" alt="Post Instagram 4" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/5.jpg" alt="Post Instagram 5" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/6.jpeg" alt="Post Instagram 6" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/7.jpg" alt="Post Instagram 7" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/8.webp" alt="Post Instagram 8" loading="lazy"></div>
+                <div class="insta-post"><img src="./assets/img/9.jpg" alt="Post Instagram 9" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIEN SOY / ABOUT-->
+    <section id="about" class="container section-padding">
+        <h2 class="fade-in-element">About</h2>
+        <div class="quien-soy-content fade-in-element">
+            <div class="quien-soy-img">
+                <img src="./assets/img/2.webp" alt="Foto de [Tu Nombre]">
+            </div>
+            <div class="quien-soy-bio">
+                <h3>Hola, soy Mariel Fernández</h3>
+                <p>Soy Licenciada en Nutrición (M.N. 352659) egresada de la Universidad de Buenos Aires, apasionada por la ciencia de la alimentación y el impacto que tiene en nuestra calidad de vida. Mi enfoque se basa en la educación alimentaria, promoviendo hábitos sostenibles y una relación positiva con la comida, lejos de las dietas restrictivas.</p>
+                <p>Creo firmemente que cada persona es única, y por eso mis planes son 100% personalizados. Mi objetivo es brindarte las herramientas y el conocimiento para que tomes decisiones informadas sobre tu alimentación y logres un bienestar integral. ¡Me encantaría acompañarte en este proceso de transformación!</p>
+            </div>
+        </div>
+        <div class="cta-button-container fade-in-element">
+            <a href="#contacto" class="cta-button cta-button-secondary">Feeling ready? Schedule an appointment now!</a>
+        </div>
+    </section>
+
+    <!-- CONTACTO / CONTACT -->
+    <section id="contacto" class="container section-padding">
+        <h2 class="fade-in-element">Contact</h2>
+        
+        <!-- FORMULARIO DE CONTACTO: Este formulario no envía datos por defecto. Requiere configuración en backend o servicios como Formspree / Netlify Forms / etc. -->
+
+        <form action="#" method="POST" class="contact-form fade-in-element">
+            <div class="form-group">
+                <label for="nombre">Full Name:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Message:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col fade-in-element">
+                <a href="#" class="logo">Clara Template</a>
+                <p>© 2025 All rights reserved. | design: <a href="https://ndzvisual.icu" id="copylink">NDZ visual</a></p>
+            </div>
+            <div class="footer-col fade-in-element">
+                <h4>Menú</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col fade-in-element">
+                <h4>Social</h4>
+                <div class="social-icons"> <!-- Poner tus usuarios en los links / Use your usernames on the links-->
+                    <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/ndz.visual" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@TuUsuarioTikTok" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/TUNUMERODEWHATSAPP" class="whatsapp-float" target="_blank" aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="./assets/js/script.js" defer></script>
+</body>
+</html>

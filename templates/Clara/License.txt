@@ -1,0 +1,34 @@
+[ESP]
+Copyright 2025 – Francisco Fernández / NDZ Visual
+
+Este template está licenciado bajo Copyleft.
+
+✅ Permitido:
+- Uso personal o comercial
+- Modificaciones
+- Reventa como parte de un servicio final
+
+❌ No permitido:
+- Revender como plantilla original sin modificar
+- Eliminar el comentario de autoría en el CSS
+
+Incluye: index.html, style.css, script.js, imágenes de muestra
+
+===
+
+[ENG]
+Copyright 2025 – Francisco Fernández / NDZ Visual
+
+This template is licensed under Copyleft.
+
+✅ Allowed:
+- Commercial and personal use
+- Edits
+- Use for sale as part of a service
+
+❌ Forbidden:
+- Resale as template whitout editing
+- Delete the author comment on CSS file
+
+Includes: index.html, style.css, script.js, sample images
+

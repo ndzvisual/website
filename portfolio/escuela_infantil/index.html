@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escuela Infantil Brotes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-blue': '#B8E0F6',
+                        'light-blue': '#D4EFFC',
+                        'pale-pink': '#FFD6E0',
+                        'warm-pink': '#FFB7C5',
+                        'sky-blue': '#A7C7E7',
+                    },
+                    fontFamily: {
+                        'handwriting': ['"Indie Flower"', 'cursive'],
+                        'playful': ['"Comic Neue"', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-light-blue text-gray-800">
+    <!-- Header with Navigation -->
+    <header class="bg-gradient-to-r from-soft-blue to-pale-pink shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-child-reaching text-3xl text-warm-pink wiggle"></i>
+                <h1 class="text-3xl font-bold text-sky-blue">
+                    <span class="text-3xl font-bold ">Escuela Infantil</span>
+                    <span class="text-warm-pink">Brotes</span>
+                </h1>
+            </div>
+
+            <!-- Botón menú (hamburguesa) - solo visible en mobile -->
+            <button id="menu-btn" class="md:hidden text-sky-blue text-2xl focus:outline-none z-50 relative">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Botón cerrar (X) - solo visible en mobile cuando el menú está abierto -->
+            <button id="close-btn"
+                class="hidden md:hidden text-sky-blue text-2xl focus:outline-none absolute top-6 right-6 z-50">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Menú de navegación -->
+            <nav id="menu"
+                class="hidden opacity-0 transition-opacity duration-300 flex flex-col md:flex md:flex-row md:items-center absolute top-16 left-0 w-full bg-soft-blue md:bg-transparent md:static md:w-auto md:opacity-100 md:space-x-6 px-4 py-4 md:py-0 space-y-4 md:space-y-0">
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Inicio</a>
+                <a href="historia.html" target="_blank"
+                    class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Historia</a>
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Objetivos</a>
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Comunidad</a>
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Contacto</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="cloud-bg py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-sky-blue">Fortalenciendo</span>
+                    <span class="text-warm-pink">la creatividad</span>
+                    <span class="block text-sky-blue">mediante el juego</span>
+                </h2>
+                <p class="text-xl mb-6 text-gray-700">
+                    En nuestra escuela lxs niñxs aprenderán a través de la exploración, el juego y la conexión con la
+                    naturaleza.
+                </p>
+                <div class="flex space-x-4">
+                    <button
+                        class="bg-warm-pink hover:bg-pale-pink text-grey font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-105">
+                        Agendá una visita
+                    </button>
+                    <button
+                        class="bg-sky-blue hover:bg-soft-blue text-grey font-bold py-3 px-6 rounded-full shadow-lg transition transform hover:scale-105">
+                        Seguir viendo
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="hand-drawn-border bg-white p-4 rounded-lg shadow-xl max-w-md mx-auto">
+                    <img src="https://images.unsplash.com/photo-1565425518476-3229123699c5?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Children playing" class="w-full h-auto rounded-lg">
+                </div>
+                <!-- <div class="absolute -top-8 -left-8">
+                    <i class="fas fa-star text-yellow-300 text-4xl bounce"></i>
+                </div>
+                <div class="absolute -bottom-8 -right-8">
+                    <i class="fas fa-heart text-warm-pink text-4xl wiggle"></i>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gradient-to-b from-light-blue to-pale-pink">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-sky-blue">
+                Nuestro <span class="text-warm-pink">enfoque</span> pedagógico
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition text-center">
+                    <div class="bg-pale-pink w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-seedling text-2xl text-warm-pink"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-sky-blue">Basado en la naturaleza</h3>
+                    <p class="text-gray-600">Tenemos un espacio al aire libre protegido para poder realizar actividades
+                        con lxs niñxs</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition text-center">
+                    <div class="bg-soft-blue w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paint-brush text-2xl text-sky-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-warm-pink">Juego creativo</h3>
+                    <p class="text-gray-600">Utilizamos juegos y juguetes preaprados para encender la creatividad y la
+                        imaginación</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition text-center">
+                    <div class="bg-pale-pink w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-music text-2xl text-warm-pink"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-sky-blue">Rutina y ritmo</h3>
+                    <p class="text-gray-600">Utilizamos la música para que aprendan a llevar adelante rutinas sin
+                        generarles estrés en el aprendizaje</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="py-16 bg-gradient-to-b from-pale-pink to-light-blue">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-warm-pink">
+                Nuestros <span class="text-sky-blue">Horarios</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-pale-pink to-light-blue p-8 rounded-3xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-sky-blue">Mañana</h3>
+                    <p class="text-gray-700 mb-4">Para niñxs de 2 a 4 años</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-warm-pink mr-2"></i>
+                            <span>7:30 - 12:30</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-warm-pink mr-2"></i>
+                            <span>3 o 5 días por semana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-warm-pink mr-2"></i>
+                            <span>Desayunos saludables</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="bg-sky-blue hover:bg-soft-blue text-white font-bold py-2 px-6 rounded-full transition">
+                        Ver más
+                    </button>
+                </div>
+                <div class="bg-gradient-to-br from-light-blue to-pale-pink p-8 rounded-3xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-warm-pink">Tarde</h3>
+                    <p class="text-gray-700 mb-4">Para niñxs de 2 a 4 años</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-sky-blue mr-2"></i>
+                            <span>12:30 - 17:00</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-sky-blue mr-2"></i>
+                            <span>3 o 5 días por semana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-sky-blue mr-2"></i>
+                            <span>Almuerzo y siesta</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="bg-warm-pink hover:bg-pale-pink text-white font-bold py-2 px-6 rounded-full transition">
+                        Ver más
+                    </button>
+                </div>
+                <div class="bg-gradient-to-br from-pale-pink to-light-blue p-8 rounded-3xl shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4 text-sky-blue">Jornada completa</h3>
+                    <p class="text-gray-700 mb-4">Para niñxs de 2 a 4 años</p>
+                    <ul class="mb-6 space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-sky-blue mr-2"></i>
+                            <span>7:30 - 17:00</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-sky-blue mr-2"></i>
+                            <span>3 o 5 días por semana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-sky-blue mr-2"></i>
+                            <span>Desayuno, almuerzo y siestas</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="bg-sky-blue hover:bg-pale-pink text-white font-bold py-2 px-6 rounded-full transition">
+                        Ver más
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <!-- <section class="py-16 bg-pale-pink">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-sky-blue">
+                What <span class="text-warm-pink">Parents</span> Say
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-soft-blue flex items-center justify-center">
+                            <i class="fas fa-user text-xl text-sky-blue"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-warm-pink">Sarah M.</h4>
+                            <p class="text-sm text-gray-500">Parent of 3-year-old</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The teachers at Little Blossoms have created such a warm, nurturing
+                        environment. My daughter looks forward to school every day!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-pale-pink flex items-center justify-center">
+                            <i class="fas fa-user text-xl text-warm-pink"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-sky-blue">James T.</h4>
+                            <p class="text-sm text-gray-500">Parent of 4-year-old</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"I love how much time the children spend outdoors. The nature-based
+                        curriculum has really helped my son develop confidence."</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-soft-blue flex items-center justify-center">
+                            <i class="fas fa-user text-xl text-sky-blue"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold text-warm-pink">Priya K.</h4>
+                            <p class="text-sm text-gray-500">Parent of 5-year-old</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"The emphasis on creative play has been wonderful for my daughter's
+                        imagination. She comes home with the most beautiful stories!"</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-sky-blue to-warm-pink text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">¿Listxs para conocernos?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">¡Agendá una visita y vení a ver el mejor lugar para tus hijxs!</p>
+            <button
+                class="bg-white hover:bg-pale-pink text-sky-blue font-bold py-3 px-8 rounded-full shadow-lg text-lg transition transform hover:scale-105">
+                ¡Quiero ir!
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-sky-blue">
+                        <span>Escuela Infantil</span>
+                        <span class="text-warm-pink">Brotes</span>
+                    </h3>
+                    <p class="text-gray-600 mb-4">En nuestra escuela lxs niñxs aprenderán a través de la exploración, el
+                        juego y la conexión con la naturaleza.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-sky-blue hover:text-warm-pink text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-sky-blue hover:text-warm-pink text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-warm-pink">Enlaces</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Inicio</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Historia</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Objetivos</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Comunidad</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Empleos</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Calendario Oficial</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-sky-blue">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-warm-pink mr-2"></i>
+                            <span class="text-gray-600">123 Blossom Lane, Ciudad Autónoma de Buenos Aires</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-warm-pink mr-2"></i>
+                            <span class="text-gray-600">(123) 4567-8910</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-warm-pink mr-2"></i>
+                            <span class="text-gray-600">hola@escuelabrotes.com.ar</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div>
+                    <h4 class="font-bold mb-4 text-warm-pink">Newsletter</h4>
+                    <p class="text-gray-600 mb-4">Subscribe for updates and parenting tips!</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="px-4 py-2 rounded-l-full focus:outline-none w-full">
+                        <button class="bg-sky-blue hover:bg-soft-blue text-white px-4 py-2 rounded-r-full">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Escuela Infantil Brotes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating elements
+    <div class="fixed bottom-8 right-8">
+        <button
+            class="bg-warm-pink hover:bg-pale-pink text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-2xl transition transform hover:scale-110">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <div class="fixed top-1/4 left-4 animate-bounce">
+        <i class="fas fa-cloud text-white text-4xl opacity-70"></i>
+    </div>
+
+    <div class="fixed bottom-1/3 right-12 animate-bounce" style="animation-delay: 0.5s;">
+        <i class="fas fa-cloud text-white text-5xl opacity-50"></i>
+    </div> -->
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const menu = document.getElementById('menu');
+        const menuLinks = menu.querySelectorAll('a'); // Todos los links del menú
+
+        // Función para abrir menú
+        function openMenu() {
+            menu.classList.remove('hidden');
+            menu.classList.remove('opacity-0');
+            menu.classList.add('opacity-100');
+            menuBtn.classList.add('hidden');
+            closeBtn.classList.remove('hidden');
+        }
+
+        // Función para cerrar menú
+        function closeMenu() {
+            menu.classList.add('opacity-0');
+            setTimeout(() => {
+                menu.classList.add('hidden');
+            }, 300); // Espera a que termine la transición
+            closeBtn.classList.add('hidden');
+            menuBtn.classList.remove('hidden');
+        }
+
+        // Eventos
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Cerrar el menú cuando se hace click en un link (solo en mobile)
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // Solo para pantallas mobile
+                    closeMenu();
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

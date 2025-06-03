@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-blue': '#B8E0F6',
+                        'light-blue': '#D4EFFC',
+                        'pale-pink': '#FFD6E0',
+                        'warm-pink': '#FFB7C5',
+                        'sky-blue': '#A7C7E7',
+                    },
+                    fontFamily: {
+                        'handwriting': ['"Indie Flower"', 'cursive'],
+                        'playful': ['"Comic Neue"', 'cursive']
+                    },
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="bg-light-blue text-gray-800">
+    <!-- Header with Navigation -->
+    <header class="bg-gradient-to-r from-soft-blue to-pale-pink shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-child-reaching text-3xl text-warm-pink wiggle"></i>
+                <h1 class="text-3xl font-bold text-sky-blue">
+                    <span class="text-3xl font-bold ">Escuela Infantil</span>
+                    <span class="text-warm-pink">Brotes</span>
+                </h1>
+            </div>
+
+            <!-- Botón menú (hamburguesa) - solo visible en mobile -->
+            <button id="menu-btn" class="md:hidden text-sky-blue text-2xl focus:outline-none z-50 relative">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Botón cerrar (X) - solo visible en mobile cuando el menú está abierto -->
+            <button id="close-btn"
+                class="hidden md:hidden text-sky-blue text-2xl focus:outline-none absolute top-6 right-6 z-50">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <!-- Menú de navegación -->
+            <nav id="menu"
+                class="hidden opacity-0 transition-opacity duration-300 flex flex-col md:flex md:flex-row md:items-center absolute top-16 left-0 w-full bg-soft-blue md:bg-transparent md:static md:w-auto md:opacity-100 md:space-x-6 px-4 py-4 md:py-0 space-y-4 md:space-y-0">
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Inicio</a>
+                <a href="historia.html" target="_blank"
+                    class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Historia</a>
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Objetivos</a>
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Comunidad</a>
+                <a href="#" class="text-sky-blue hover:text-warm-pink text-lg font-semibold transition">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] bg-cover bg-center"
+        style="background-image: url('https://www.lummi.ai/api/render/image/b98d5087-e140-40dc-88ff-4b80f498a9dc?token=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImI5OGQ1MDg3LWUxNDAtNDBkYy04OGZmLTRiODBmNDk4YTlkYyIsImRvd25sb2FkU2l6ZSI6Im1lZGl1bSIsInJlbmRlclNwZWNzIjp7ImVmZmVjdHMiOnsicmVmcmFtZSI6e319fSwic2hvdWxkQXV0b0Rvd25sb2FkIjpmYWxzZSwianRpIjoiSXdkM1hZSGxwcE1kRjYyQkx5bl8wIiwiaWF0IjoxNzQ1ODgyNDgyLCJleHAiOjE3NDU4ODI1NDJ9.WjwO8s1Q7HySo6v4_V6g3fJJ7AtWpiV7k1LoYRERo5A');">
+        <!-- Capa de oscurecimiento -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Contenido centrado -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Objetivos</h1>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-10">
+        <section class="bg-white rounded-2xl shadow-lg p-8 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-sky-blue">¿Quiénes somos?</h2>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Somos un grupo de personas apasionadas por crear, innovar y compartir.
+                Desde nuestros inicios en 2010, hemos trabajado para construir proyectos
+                que inspiran y transforman.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+                Creemos en el trabajo en equipo, el respeto mutuo y la búsqueda constante de la excelencia.
+            </p>
+        </section>
+
+        <section class="mt-12 flex flex-col md:flex-row md:justify-around text-center gap-8">
+            <div class="bg-warm-pink p-6 rounded-xl shadow-md">
+                <i class="fas fa-users text-4xl mb-4 text-white"></i>
+                <h3 class="text-xl font-semibold mb-2">Nuestro Equipo</h3>
+                <p class="text-gray-700">Un equipo diverso y talentoso que ama lo que hace.</p>
+            </div>
+            <div class="bg-sky-blue p-6 rounded-xl shadow-md">
+                <i class="fas fa-bullseye text-4xl mb-4 text-white"></i>
+                <h3 class="text-xl font-semibold mb-2">Nuestra Misión</h3>
+                <p class="text-gray-700">Crear soluciones que generen impacto real en la vida de las personas.</p>
+            </div>
+            <div class="bg-pale-pink p-6 rounded-xl shadow-md">
+                <i class="fas fa-heart text-4xl mb-4 text-white"></i>
+                <h3 class="text-xl font-semibold mb-2">Nuestros Valores</h3>
+                <p class="text-gray-700">Pasión, compromiso, integridad y empatía.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-sky-blue to-warm-pink text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-xl md:text-3xl">¿Listxs para conocernos?</h2>
+            <p class="text-xl mb-8 max-w-xl md:max-w-2xl mx-auto">¡Agendá una visita y vení a ver el mejor lugar para
+                tus hijxs!</p>
+            <button
+                class="bg-white hover:bg-pale-pink text-sky-blue font-bold py-3 px-8 rounded-full shadow-lg text-lg transition transform hover:scale-105">
+                ¡Quiero ir!
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-sky-blue">
+                        <span>Escuela Infantil</span>
+                        <span class="text-warm-pink">Brotes</span>
+                    </h3>
+                    <p class="text-gray-600 mb-4">En nuestra escuela lxs niñxs aprenderán a través de la
+                        exploración, el juego y la conexión con la naturaleza.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-sky-blue hover:text-warm-pink text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-sky-blue hover:text-warm-pink text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-warm-pink">Enlaces</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Inicio</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Historia</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Objetivos</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Comunidad</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Empleos</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Calendario Oficial</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-sky-blue transition">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-sky-blue">Contacto</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-warm-pink mr-2"></i>
+                            <span class="text-gray-600">123 Blossom Lane, Ciudad Autónoma de Buenos Aires</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-warm-pink mr-2"></i>
+                            <span class="text-gray-600">(123) 4567-8910</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-warm-pink mr-2"></i>
+                            <span class="text-gray-600">hola@escuelabrotes.com.ar</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Escuela Infantil Brotes.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Floating elements -->
+    <!-- <div class="fixed bottom-8 right-8">
+        <button
+            class="bg-warm-pink hover:bg-pale-pink text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center text-2xl transition transform hover:scale-110">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <div class="fixed top-1/4 left-4 animate-bounce">
+        <i class="fas fa-cloud text-white text-4xl opacity-70"></i>
+    </div>
+
+    <div class="fixed bottom-1/3 right-12 animate-bounce" style="animation-delay: 0.5s;">
+        <i class="fas fa-cloud text-white text-5xl opacity-50"></i>
+    </div> -->
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const menu = document.getElementById('menu');
+        const menuLinks = menu.querySelectorAll('a'); // Todos los links del menú
+
+        // Función para abrir menú
+        function openMenu() {
+            menu.classList.remove('hidden');
+            menu.classList.remove('opacity-0');
+            menu.classList.add('opacity-100');
+            menuBtn.classList.add('hidden');
+            closeBtn.classList.remove('hidden');
+        }
+
+        // Función para cerrar menú
+        function closeMenu() {
+            menu.classList.add('opacity-0');
+            setTimeout(() => {
+                menu.classList.add('hidden');
+            }, 300); // Espera a que termine la transición
+            closeBtn.classList.add('hidden');
+            menuBtn.classList.remove('hidden');
+        }
+
+        // Eventos
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        // Cerrar el menú cuando se hace click en un link (solo en mobile)
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // Solo para pantallas mobile
+                    closeMenu();
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
