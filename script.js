@@ -1,131 +1,121 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
-    // --- Mobile Navigation Toggle ---
-    const navToggle = document.querySelector('.nav-toggle');
-    const mainNav = document.querySelector('.main-nav ul');
-    const siteHeader = document.querySelector('.site-header'); // To change toggle color if menu is open
+  // --- Mobile Navigation Toggle ---
+  const navToggle = document.querySelector('.nav-toggle');
+  const mainNav = document.querySelector('.main-nav ul');
+  const siteHeader = document.querySelector('.site-header');
 
-    if (navToggle && mainNav) {
-        navToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('nav-active');
-            navToggle.classList.toggle('active');
-            
-            // Optional: Prevent body scroll when menu is open
-            if (mainNav.classList.contains('nav-active')) {
-                document.body.style.overflow = 'hidden';
-                siteHeader.classList.add('menu-open'); // For potential styling of toggle on dark bg
-            } else {
-                document.body.style.overflow = '';
-                siteHeader.classList.remove('menu-open');
-            }
-        });
+  if (navToggle && mainNav) {
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('nav-active');
+      navToggle.classList.toggle('active');
 
-        // Close menu when a link is clicked
-        mainNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (mainNav.classList.contains('nav-active')) {
-                    mainNav.classList.remove('nav-active');
-                    navToggle.classList.remove('active');
-                    document.body.style.overflow = '';
-                    siteHeader.classList.remove('menu-open');
-                }
-            });
-        });
-    }
-
-    // --- Fade-in on Scroll Animation ---
-    const fadeElements = document.querySelectorAll('.fade-in');
-
-    const observerOptions = {
-        root: null, // relative to the viewport
-        rootMargin: '0px',
-        threshold: 0.1 // 10% of the element is visible
-    };
-
-    const fadeInObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optional: unobserve after animation to save resources
-                // observer.unobserve(entry.target); 
-            } else {
-                // Optional: remove 'visible' to re-trigger animation on scroll up/down
-                // entry.target.classList.remove('visible');
-            }
-        });
-    }, observerOptions);
-
-    fadeElements.forEach(el => {
-        fadeInObserver.observe(el);
+      if (mainNav.classList.contains('nav-active')) {
+        document.body.style.overflow = 'hidden';
+        siteHeader.classList.add('menu-open');
+      } else {
+        document.body.style.overflow = '';
+        siteHeader.classList.remove('menu-open');
+      }
     });
 
-    // --- Footer Current Year ---
-    const currentYearSpan = document.getElementById('currentYear');
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
-
-    // --- Active Link Highlighting on Scroll (Optional but nice) ---
-    const sections = document.querySelectorAll('main section[id]');
-    const navLinks = document.querySelectorAll('.main-nav ul li a');
-
-    function changeLinkState() {
-        let index = sections.length;
-
-        while(--index && window.scrollY + 100 < sections[index].offsetTop) {} // 100 is offset
-      
-        navLinks.forEach((link) => link.classList.remove('active-link'));
-        if (navLinks[index]) {
-            navLinks[index].classList.add('active-link');
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (mainNav.classList.contains('nav-active')) {
+          mainNav.classList.remove('nav-active');
+          navToggle.classList.remove('active');
+          document.body.style.overflow = '';
+          siteHeader.classList.remove('menu-open');
         }
-    }
+      });
+    });
+  }
 
-    if (sections.length > 0 && navLinks.length > 0) {
-        changeLinkState(); // Initial check
-        window.addEventListener('scroll', changeLinkState);
+  // --- Fade-in on Scroll Animation ---
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  if (fadeElements.length > 0) {
+    const fadeInObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+
+    fadeElements.forEach(el => {
+      fadeInObserver.observe(el);
+    });
+  }
+
+  // --- Footer Current Year ---
+  const currentYearSpan = document.getElementById('currentYear');
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+  }
+
+  // --- Active Link Highlighting on Scroll ---
+  const sections = document.querySelectorAll('main section[id]');
+  const navLinks = document.querySelectorAll('.main-nav ul li a');
+
+  function changeLinkState() {
+    let index = sections.length;
+    while (--index && window.scrollY + 100 < sections[index].offsetTop) {}
+    navLinks.forEach(link => link.classList.remove('active-link'));
+    if (navLinks[index]) {
+      navLinks[index].classList.add('active-link');
     }
+  }
+
+  if (sections.length > 0 && navLinks.length > 0) {
+    changeLinkState();
+    window.addEventListener('scroll', changeLinkState);
+  }
+
+  // --- Form Submission ---
+  const form = document.querySelector('form[name="contact"]');
+  const status = document.getElementById('formStatus');
+
+  if (form && status) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      status.style.display = 'block';
+      status.textContent = 'Enviando... ';
+      const spinner = document.createElement('span');
+      spinner.id = 'loadingSpinner';
+      status.appendChild(spinner);
+
+      const formData = new FormData(form);
+      formData.append('form-name', form.getAttribute('name'));
+
+      const encode = (data) => {
+        return [...data.entries()]
+          .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
+          .join('&');
+      };
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode(formData),
+      })
+        .then(response => {
+          if (response.ok) {
+            status.textContent = '¡Mensaje enviado con éxito! Gracias por contactarnos.';
+            form.reset();
+          } else {
+            status.textContent = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
+          }
+        })
+        .catch(() => {
+          status.textContent = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
+        });
+    });
+  }
 
 });
-
-const form = document.querySelector('form[name="contact"]');
-const status = document.getElementById('formStatus');
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  status.style.display = 'block';
-  status.textContent = 'Enviando... ';
-
-  const spinner = document.createElement('span');
-  spinner.id = 'loadingSpinner';
-  status.appendChild(spinner);
-
-  // Serializar los datos en formato x-www-form-urlencoded
-  const formData = new FormData(form);
-  formData.append('form-name', form.getAttribute('name'));
-
-  const encode = (data) => {
-    return [...data.entries()]
-      .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
-      .join('&');
-  };
-
-  fetch('/', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: encode(formData),
-  })
-  .then(response => {
-    if (response.ok) {
-      status.textContent = '¡Mensaje enviado con éxito! Gracias por contactarnos.';
-      form.reset();
-    } else {
-      status.textContent = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
-    }
-  })
-  .catch(() => {
-    status.textContent = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
-  });
-});
-
-

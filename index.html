@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,29 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    </noscript>
     <!-- Simple icon library for hamburger/cross & paper plane -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </noscript>
+    <meta name="description" content="Estudio de diseño web en Buenos Aires que brinda soluciones profesionales, simples y accesibles para emprendedores, pequeños negocios y profesionales independientes.">
+
+
 </head>
+
 <body>
 
     <header class="site-header">
         <div class="container header-container">
             <a href="#" class="logo">
-                <img src="./assets/img/icon.png" alt="NDZ Visual Logo"> <!-- Placeholder for logo -->
+                <img src="./assets/img/icon.webp" alt="NDZ Visual Logo" loading="lazy"> <!-- Placeholder for logo -->
             </a>
             <nav class="main-nav">
                 <button class="nav-toggle" aria-label="Abrir menú de navegación">
@@ -37,7 +51,8 @@
         <!-- SECTION 1: HERO -->
         <section id="hero" class="hero-section fade-in">
             <div class="container">
-                <img src="./assets/img/icon.png" alt="NDZ Visual" class="hero-logo"> <!-- Larger/different hero logo if desired -->
+                <img src="./assets/img/icon.webp" alt="NDZ Visual" class="hero-logo" loading="lazy">
+                <!-- Larger/different hero logo if desired -->
                 <h1>No hacemos sitios web, hacemos soluciones web.</h1>
             </div>
         </section>
@@ -47,9 +62,17 @@
             <div class="container">
                 <h2>Sobre Nosotros</h2>
                 <div class="about-content">
-                    <p>En NDZ Visual, somos un estudio de diseño web creativo con base en el corazón de Buenos Aires, Argentina. Nos apasiona transformar ideas en experiencias digitales impactantes y funcionales. Creemos que un sitio web es mucho más que una simple presencia online; es una herramienta poderosa para alcanzar tus objetivos.</p>
-                    <p>Nuestro enfoque se centra en la colaboración estrecha con nuestros clientes. Escuchamos tus necesidades, entendemos tu visión y trabajamos juntos para crear soluciones web a medida que no solo se vean increíbles, sino que también generen resultados tangibles. La simplicidad, la elegancia y la usabilidad son pilares fundamentales en cada proyecto que emprendemos.</p>
-                    <p>Ayudamos a marcas de todos los tamaños a destacar en el competitivo mundo digital. Con un ojo puesto en las últimas tendencias y tecnologías, nos aseguramos de que tu proyecto esté a la vanguardia, listo para conectar con tu audiencia y crecer.</p>
+                    <p>En NDZ Visual, somos un estudio de diseño web creativo con base en el corazón de Buenos Aires,
+                        Argentina. Nos apasiona transformar ideas en experiencias digitales impactantes y funcionales.
+                        Creemos que un sitio web es mucho más que una simple presencia online; es una herramienta
+                        poderosa para alcanzar tus objetivos.</p>
+                    <p>Nuestro enfoque se centra en la colaboración estrecha con nuestros clientes. Escuchamos tus
+                        necesidades, entendemos tu visión y trabajamos juntos para crear soluciones web a medida que no
+                        solo se vean increíbles, sino que también generen resultados tangibles. La simplicidad, la
+                        elegancia y la usabilidad son pilares fundamentales en cada proyecto que emprendemos.</p>
+                    <p>Ayudamos a marcas de todos los tamaños a destacar en el competitivo mundo digital. Con un ojo
+                        puesto en las últimas tendencias y tecnologías, nos aseguramos de que tu proyecto esté a la
+                        vanguardia, listo para conectar con tu audiencia y crecer.</p>
                 </div>
             </div>
         </section>
@@ -63,35 +86,40 @@
                         <div class="timeline-number">01</div>
                         <div class="timeline-content">
                             <h3>Foco Específico</h3>
-                            <p>Concentra la atención del visitante en una única oferta o mensaje, aumentando las conversiones.</p>
+                            <p>Concentra la atención del visitante en una única oferta o mensaje, aumentando las
+                                conversiones.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-in">
                         <div class="timeline-number">02</div>
                         <div class="timeline-content">
                             <h3>Generación de Leads</h3>
-                            <p>Ideal para capturar información de contacto de potenciales clientes interesados en tu producto o servicio.</p>
+                            <p>Ideal para capturar información de contacto de potenciales clientes interesados en tu
+                                producto o servicio.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-in">
                         <div class="timeline-number">03</div>
                         <div class="timeline-content">
                             <h3>Medición y Optimización</h3>
-                            <p>Permite rastrear fácilmente el rendimiento y realizar ajustes para mejorar los resultados (A/B testing).</p>
+                            <p>Permite rastrear fácilmente el rendimiento y realizar ajustes para mejorar los resultados
+                                (A/B testing).</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-in">
                         <div class="timeline-number">04</div>
                         <div class="timeline-content">
                             <h3>Costo-Efectividad</h3>
-                            <p>Más rápidas y económicas de desarrollar que un sitio web completo, perfectas para campañas específicas.</p>
+                            <p>Más rápidas y económicas de desarrollar que un sitio web completo, perfectas para
+                                campañas específicas.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-in">
                         <div class="timeline-number">05</div>
                         <div class="timeline-content">
                             <h3>Mejora el ROI Publicitario</h3>
-                            <p>Al dirigir el tráfico de tus anuncios a una página optimizada, maximizas el retorno de tu inversión.</p>
+                            <p>Al dirigir el tráfico de tus anuncios a una página optimizada, maximizas el retorno de tu
+                                inversión.</p>
                         </div>
                     </div>
                 </div>
@@ -105,28 +133,35 @@
                 <h2>Portfolio Destacado</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-card fade-in">
-                        <img src="./portfolio/escuela_infantil/screenshot.png" alt="Escuela Infantil Brotes - modelo de sitio para escuela infantil">
+                        <img src="./portfolio/escuela_infantil/screenshot.png"
+                            alt="Escuela Infantil Brotes - modelo de sitio para escuela infantil" loading="lazy">
                         <h3>Escuela Infantil Brotes</h3>
                         <p>Modelo de sitio para escuela infantil</p>
-                        <a href="/portfolio/escuela_infantil/index.html" class="button-secondary" target="_blank">Ver Proyecto</a>
+                        <a href="/portfolio/escuela_infantil/index.html" class="button-secondary" target="_blank">Ver
+                            Proyecto</a>
                     </div>
                     <div class="portfolio-card fade-in">
-                        <img src="./portfolio/hotel/screenshot.png" alt="Palacio Dorado - modelo de wesbite para hoteles">
+                        <img src="./portfolio/hotel/screenshot.png"
+                            alt="Palacio Dorado - modelo de wesbite para hoteles" loading="lazy">
                         <h3>Palacio Dorado</h3>
                         <p>Website para hoteles / alojamientos</p>
                         <a href="./portfolio/hotel/index.html" class="button-secondary" target="_blank">Ver Proyecto</a>
                     </div>
                     <div class="portfolio-card fade-in">
-                        <img src="./portfolio/naturalbeauty/screenshot.png" alt="Natural Beauty - website para centro de estética y spa">
+                        <img src="./portfolio/naturalbeauty/screenshot.png"
+                            alt="Natural Beauty - website para centro de estética y spa" loading="lazy">
                         <h3>Natural Beauty</h3>
                         <p>Website para centro de estética y spa</p>
-                        <a href="./portfolio/naturalbeauty/index.html" class="button-secondary" target="_blank">Ver Proyecto</a>
+                        <a href="./portfolio/naturalbeauty/index.html" class="button-secondary" target="_blank">Ver
+                            Proyecto</a>
                     </div>
                     <div class="portfolio-card fade-in">
-                        <img src="./portfolio/real_state/screenshot.png" alt="Vista Buenos Aires - modelo para inmobiliaria">
+                        <img src="./portfolio/real_state/screenshot.png"
+                            alt="Vista Buenos Aires - modelo para inmobiliaria" loading="lazy">
                         <h3>Vista Buenos Aires</h3>
                         <p>Landing page modelo para inmobiliaria / empresa constructora</p>
-                        <a href="./portfolio/real_state/index.html" class="button-secondary" target="_blank">Ver Proyecto</a>
+                        <a href="./portfolio/real_state/index.html" class="button-secondary" target="_blank">Ver
+                            Proyecto</a>
                     </div>
                 </div>
             </div>
@@ -148,15 +183,18 @@
                 <h2>Lo que dicen nuestros clientes</h2>
                 <div class="reviews-grid">
                     <div class="review-card fade-in">
-                        <p>"Increíble trabajo y atención al detalle. NDZ Visual entendió perfectamente lo que necesitábamos y superó nuestras expectativas. ¡Recomendadísimos!"</p>
+                        <p>"Increíble trabajo y atención al detalle. NDZ Visual entendió perfectamente lo que
+                            necesitábamos y superó nuestras expectativas. ¡Recomendadísimos!"</p>
                         <h4>- Ana P., CEO de TechStart</h4>
                     </div>
                     <div class="review-card fade-in">
-                        <p>"El proceso fue súper ágil y el resultado final es una web moderna y funcional. El equipo de NDZ es muy profesional y creativo."</p>
+                        <p>"El proceso fue súper ágil y el resultado final es una web moderna y funcional. El equipo de
+                            NDZ es muy profesional y creativo."</p>
                         <h4>- Juan M., Fundador de Café Delicia</h4>
                     </div>
                     <div class="review-card fade-in">
-                        <p>"Desde el primer contacto hasta la entrega, todo fue impecable. Nuestra nueva landing page está generando más leads que nunca."</p>
+                        <p>"Desde el primer contacto hasta la entrega, todo fue impecable. Nuestra nueva landing page
+                            está generando más leads que nunca."</p>
                         <h4>- Sofía L., Marketing Manager</h4>
                     </div>
                 </div>
@@ -212,8 +250,9 @@
     <footer class="site-footer-main">
         <div class="container footer-container">
             <div class="footer-column footer-col-1">
-                <img src="./assets/img/icon.png" alt="NDZ Visual Logo" class="footer-logo"> <!-- Footer logo -->
-                <p>© <span id="currentYear"></span> NDZ Visual. Todos los derechos reservados. <br>Estudio de diseño web, Buenos Aires, Argentina.</p>
+                <img src="./assets/img/icon.webp" alt="NDZ Visual Logo" class="footer-logo"> <!-- Footer logo -->
+                <p>© <span id="currentYear"></span> NDZ Visual. Todos los derechos reservados. <br>Estudio de diseño
+                    web, Buenos Aires, Argentina.</p>
             </div>
             <div class="footer-column footer-col-2">
                 <h4>Navegación</h4>
@@ -237,6 +276,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
