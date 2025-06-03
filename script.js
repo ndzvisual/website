@@ -87,37 +87,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-const form = document.getElementById('contactForm');
+const form = document.querySelector('form[name="contact"]');
 const status = document.getElementById('formStatus');
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  // Mostrar mensaje de loading con spinner
-  status.style.display = 'inline-block';
-  status.innerHTML = 'Enviando... <span id="loadingSpinner"></span>';
+  status.style.display = 'block';
+  status.textContent = 'Enviando...';
 
-  // Crear spinner (agregado en el div)
-  const spinner = document.createElement('span');
-  spinner.id = 'loadingSpinner';
-  status.appendChild(spinner);
-
-  // Enviar datos con fetch a Netlify Forms
+  // Serializar los datos en formato x-www-form-urlencoded
   const formData = new FormData(form);
+  formData.append('form-name', form.getAttribute('name'));
+
+  const encode = (data) => {
+    return [...data.entries()]
+      .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
+      .join('&');
+  };
 
   fetch('/', {
     method: 'POST',
-    body: formData,
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encode(formData),
   })
   .then(response => {
     if (response.ok) {
-      status.innerHTML = '¡Mensaje enviado con éxito! Gracias por contactarnos.';
+      status.textContent = '¡Mensaje enviado con éxito! Gracias por contactarnos.';
       form.reset();
     } else {
-      status.innerHTML = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
+      status.textContent = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
     }
   })
   .catch(() => {
-    status.innerHTML = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
+    status.textContent = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
   });
 });
+
