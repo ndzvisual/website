@@ -94,7 +94,11 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
 
   status.style.display = 'block';
-  status.textContent = 'Enviando...';
+  status.textContent = 'Enviando... ';
+
+  const spinner = document.createElement('span');
+  spinner.id = 'loadingSpinner';
+  status.appendChild(spinner);
 
   // Serializar los datos en formato x-www-form-urlencoded
   const formData = new FormData(form);
@@ -123,4 +127,5 @@ form.addEventListener('submit', function(event) {
     status.textContent = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
   });
 });
+
 
