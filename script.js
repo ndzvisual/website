@@ -86,3 +86,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
+const form = document.getElementById('contactForm');
+const status = document.getElementById('formStatus');
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Mostrar mensaje de loading con spinner
+  status.style.display = 'inline-block';
+  status.innerHTML = 'Enviando... <span id="loadingSpinner"></span>';
+
+  // Crear spinner (agregado en el div)
+  const spinner = document.createElement('span');
+  spinner.id = 'loadingSpinner';
+  status.appendChild(spinner);
+
+  // Enviar datos con fetch a Netlify Forms
+  const formData = new FormData(form);
+
+  fetch('/', {
+    method: 'POST',
+    body: formData,
+  })
+  .then(response => {
+    if (response.ok) {
+      status.innerHTML = '¡Mensaje enviado con éxito! Gracias por contactarnos.';
+      form.reset();
+    } else {
+      status.innerHTML = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
+    }
+  })
+  .catch(() => {
+    status.innerHTML = 'Error al enviar el mensaje. Por favor, intentá de nuevo.';
+  });
+});

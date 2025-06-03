@@ -167,7 +167,8 @@
         <section id="contact" class="contact-section fade-in">
             <div class="container">
                 <h2>Hablemos sobre lo que necesitás</h2>
-                <form action="#" method="POST" class="contact-form">
+                <form name="contact" action="#" method="POST" data-netlify="true" class="contact-form">
+                    <input type="hidden" name="form-name" value="contact">
                     <div class="form-group">
                         <label for="name">Nombre completo</label>
                         <input type="text" id="name" name="name" required>
@@ -196,6 +197,7 @@
                         <button type="submit" class="cta-button">Enviar Mensaje</button>
                     </div>
                 </form>
+                <div id="formStatus" style="display:none; margin-top:10px;"></div>
             </div>
         </section>
 
