@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NDZ VISUAL — Diseño y Desarrollo Web</title>
+  <meta name="description" content="NDZ VISUAL es una agencia de diseño y desarrollo web especializada en profesionales y pequeños comercios. Sitios web modernos, rápidos y atractivos que convierten visitantes en clientes.">
+  <meta property="og:title" content="NDZ VISUAL — Diseño y Desarrollo Web">
+  <meta property="og:description" content="Sitios web modernos, rápidos y atractivos para profesionales y pequeños comercios.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◉</text></svg>">
+</head>
+<body>
+
+  <div class="scroll-progress" id="progressBar" aria-hidden="true"></div>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="NDZ VISUAL, inicio">
+        NDZ<span>VISUAL</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#que-hacemos">Qué hacemos</a>
+        <a href="#precios">Precios</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn-sm nav-cta" href="#contacto">Empezá hoy</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="blob blob-a" data-parallax="0.18" aria-hidden="true"></div>
+      <div class="blob blob-b" data-parallax="0.30" aria-hidden="true"></div>
+      <div class="blob blob-c" data-parallax="0.12" aria-hidden="true"></div>
+      <div class="grid-pattern" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <p class="eyebrow reveal reveal-down">Diseño &amp; Desarrollo Web</p>
+        <h1 class="hero-title reveal reveal-up">
+          Creamos sitios web que <span class="accent">convierten</span> visitantes en clientes
+        </h1>
+        <p class="hero-sub reveal reveal-up" style="--d:.12s">
+          En NDZ VISUAL diseñamos y desarrollamos páginas web modernas, rápidas y atractivas
+          para profesionales y pequeños comercios que quieren destacar online.
+        </p>
+        <div class="hero-actions reveal reveal-up" style="--d:.24s">
+          <a class="btn" href="#contacto">Empezá tu proyecto</a>
+          <a class="btn btn-ghost" href="#precios">Ver planes</a>
+        </div>
+      </div>
+
+      <a class="hero-scroll reveal reveal-up" href="#quienes-somos" style="--d:.4s" aria-label="Bajar a quiénes somos">
+        <span class="hero-scroll-line"></span>
+      </a>
+    </section>
+
+    <section class="section" id="quienes-somos">
+      <div class="container grid-about">
+        <div class="about-copy">
+          <p class="eyebrow reveal reveal-up">Quiénes somos</p>
+          <h2 class="section-title reveal reveal-up" style="--d:.08s">
+            Una agencia <span class="accent">a tu medida</span>
+          </h2>
+          <p class="lead reveal reveal-up" style="--d:.16s">
+            NDZ VISUAL es un estudio creativo especializado en diseño y desarrollo web.
+            Trabajamos codo con codo con profesionales y pequeños comercios para crear
+            una presencia online que refleje su identidad y atraiga a sus clientes.
+          </p>
+          <p class="reveal reveal-up" style="--d:.24s">
+            No creemos en plantillas impersonales: cada proyecto se diseña y se construye
+            desde cero, pensando en tus objetivos, tu marca y tu público. Rápido, claro y sin complicaciones.
+          </p>
+          <ul class="about-points reveal reveal-up" style="--d:.32s">
+            <li>Diseño 100% a medida</li>
+            <li>Webs rápidas y optimizadas</li>
+            <li>Comunicación directa y cercana</li>
+            <li>Landing pages express para que salgas a la cancha rápido y con una imagen profesional</li>
+          </ul>
+        </div>
+
+        <div class="about-stats reveal reveal-scale" style="--d:.15s">
+          <!--<div class="stat-card">
+            <strong data-count="120">0</strong>
+            <span>Proyectos completados</span>
+          </div>
+          <div class="stat-card">
+            <strong data-count="98">0</strong>
+            <span>% Clientes satisfechos</span>
+          </div>-->
+          <div class="stat-card">
+            <strong data-count="24">0</strong>
+            <span>hs de tiempo de respuesta</span>
+          </div>
+          <div class="stat-card">
+            <strong data-count="100">0</strong>
+            <span>% Diseño a medida</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="que-hacemos">
+      <span class="watermark" data-parallax="0.1" aria-hidden="true">Servicios</span>
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal reveal-up">Qué hacemos</p>
+          <h2 class="section-title reveal reveal-up" style="--d:.08s">
+            Servicios diseñados para hacer <span class="accent">crecer tu negocio</span>
+          </h2>
+          <p class="reveal reveal-up" style="--d:.16s">
+            Todo lo que necesitás para tener una web profesional, atractiva y que funcione de verdad.
+          </p>
+        </div>
+
+        <div class="grid-services">
+          <article class="service-card reveal reveal-up" style="--d:.05s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+            </div>
+            <h3>Diseño web</h3>
+            <p>Diseños únicos y a medida: wireframes, prototipos e interfaces que reflejan tu marca y enamoran a tus visitantes.</p>
+          </article>
+
+          <article class="service-card reveal reveal-up" style="--d:.12s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>
+            </div>
+            <h3>Desarrollo web</h3>
+            <p>Código limpio y moderno. Webs rápidas, seguras y accesibles, construidas con las últimas tecnologías.</p>
+          </article>
+
+          <article class="service-card reveal reveal-up" style="--d:.19s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2 3h3l2.6 12.4A2 2 0 0 0 9.6 17h9.2a2 2 0 0 0 2-1.6L23 7H6"/></svg>
+            </div>
+            <h3>Tiendas online</h3>
+            <p>E-commerce completos y fáciles de gestionar: catálogo, carrito y pasarela de pago para vender desde el primer día.</p>
+          </article>
+
+          <article class="service-card reveal reveal-up" style="--d:.05s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            </div>
+            <h3>Optimización SEO</h3>
+            <p>Posicioná tu web en Google y llega a más clientes con una estrategia de SEO clara y medible desde el inicio.</p>
+          </article>
+
+          <article class="service-card reveal reveal-up" style="--d:.12s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.1 6.1L3 18l3 3 5.6-5.6a4.5 4.5 0 0 0 6.1-6.1L14 13l-3-3 3.7-3.7z"/></svg>
+            </div>
+            <h3>Mantenimiento y soporte</h3>
+            <p>Tu web siempre al día: actualizaciones, copias de seguridad, mejoras y asistencia rápida cuando la necesites.</p>
+          </article>
+
+          <article class="service-card reveal reveal-up" style="--d:.19s">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z"/></svg>
+            </div>
+            <h3>Identidad de marca</h3>
+            <p>Logo, paleta de colores y tipografía. Creamos una identidad coherente que hace reconocible tu negocio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="precios">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal reveal-up">Precios</p>
+          <h2 class="section-title reveal reveal-up" style="--d:.08s">
+            Planes claros, <span class="accent">sin sorpresas</span>
+          </h2>
+          <p class="reveal reveal-up" style="--d:.16s">
+            Elegí el plan que mejor se adapte a tu proyecto. Sin permanencia, sin costes ocultos.
+          </p>
+        </div>
+
+        <div class="grid-pricing">
+          <article class="pricing-card reveal reveal-up" style="--d:.05s">
+            <h3 class="pricing-name">Landing Page 1</h3>
+            <p class="pricing-desc">Ideal para salir rápido.</p>
+            <p class="pricing-price"><span>$</span>200.000 ARS</p>
+            <ul class="pricing-features">
+              <li>Landing page de una página</li>
+              <li>Diseño responsive y a medida</li>
+              <li>Hasta 4 secciones</li>
+              <li>Formulario de contacto</li>
+              <li>SEO básico</li>
+              <li>Entrega en 3 días hábiles</li>
+              <li>1 mes de soporte incluido</li>
+            </ul>
+            <a class="btn btn-outline" href="#contacto">Elegir plan</a>
+          </article>
+
+          <article class="pricing-card pricing-featured reveal reveal-scale" style="--d:.12s">
+            <span class="pricing-badge">Más popular</span>
+            <h3 class="pricing-name">Landing Page 2</h3>
+            <p class="pricing-desc">Para negocios que no necesitan velocidad</p>
+            <p class="pricing-price"><span>$</span>300.000 ARS</p>
+            <ul class="pricing-features">
+              <li>Todo lo que incluye Landing Page 1 +</li>
+              <li>Imágenes de soporte de contenido creadas con IA</li>
+              <li>Hasta dos (2) páginas internas</li>
+              <li>Entrega en siete (7) días hábiles</li>
+            </ul>
+            <a class="btn" href="#contacto">Elegir plan</a>
+          </article>
+
+          <article class="pricing-card reveal reveal-up" style="--d:.19s">
+            <h3 class="pricing-name">Custom</h3>
+            <p class="pricing-desc">100% a tu medida</p>
+            <p class="pricing-price"><span>$</span>cotizar</p>
+            <ul class="pricing-features">
+              <li>El proyecto que necesites, con lo que necesites</li>
+            </ul>
+            <a class="btn btn-outline" href="#contacto">Elegir plan</a>
+          </article>
+        </div>
+
+        <p class="pricing-note reveal reveal-up">
+          ¿No sabes qué plan te conviene? <a href="#contacto">Hablemos</a> y te ayudamos a decidir.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contacto">
+      <span class="watermark watermark-right" data-parallax="0.1" aria-hidden="true">Contacto</span>
+      <div class="container grid-contact">
+        <div class="contact-copy">
+          <p class="eyebrow reveal reveal-up">Contacto</p>
+          <h2 class="section-title reveal reveal-up" style="--d:.08s">
+            Hablemos de <span class="accent">tu proyecto</span>
+          </h2>
+          <p class="reveal reveal-up" style="--d:.16s">
+            Cuéntanos tu idea y te enviaremos una propuesta gratuita y sin compromiso.
+            Respondemos en menos de 24 horas.
+          </p>
+
+          <ul class="contact-list reveal reveal-up" style="--d:.24s">
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6L22 7"/></svg>
+              </span>
+              <a href="mailto:hola@ndzvisual.com">ndzvisual@gmail.com</a>
+            </li>
+            <!--<li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+              </span>
+              <a href="tel:+34600000000">+34 600 000 000</a>
+            </li>-->
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>Caballito, Ciudad Autónoma de Buenos Aires, Argentina · Trabajamos online para todo el mundo</span>
+            </li>
+          </ul>
+
+          <!--<div class="contact-social reveal reveal-up" style="--d:.32s">
+            <a href="#" aria-label="Instagram de NDZ VISUAL">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Behance de NDZ VISUAL">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h7a3 3 0 0 1 0 6H2V8zM2 14h7.5a3.5 3.5 0 0 1 0 7H2V14z"/><path d="M17 9h5v2M21.5 11h-5a2.5 2.5 0 0 1 0-5h4.5"/><circle cx="19" cy="18" r="2"/></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn de NDZ VISUAL">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v2a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>-->
+        </div>
+
+        <form class="contact-form reveal reveal-right" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="service">Servicio</label>
+            <select id="service" name="service" required>
+              <option value="" selected disabled>Selecciona un servicio</option>
+              <option>Landing Page 1</option>
+              <option>Landing Page 2</option>
+              <option>A medida</option>
+              <option>Otros</option>            </select>
+          </div>
+          <div class="field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto…" required></textarea>
+          </div>
+          <button class="btn btn-block" type="submit">Enviar mensaje</button>
+          <p class="form-success" id="formSuccess" role="status" hidden>¡Gracias! Tu mensaje se ha enviado correctamente. Te responderemos muy pronto.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#inicio">NDZ<span>VISUAL</span></a>
+      <nav class="footer-links" aria-label="Navegación de pie de página">
+        <a href="#quienes-somos">Quiénes somos</a>
+        <a href="#que-hacemos">Qué hacemos</a>
+        <a href="#precios">Precios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="copyright">© <span id="year">2026</span> NDZ VISUAL. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
