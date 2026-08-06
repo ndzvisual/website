@@ -163,22 +163,45 @@
       var success = document.getElementById("formSuccess");
       var submitBtn = form.querySelector('[type="submit"]');
 
+      // Deshabilitar el botón mientras se envía
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = "Enviando…";
       }
 
-      setTimeout(function () {
-        form.reset();
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Enviar mensaje";
-        }
-        if (success) success.hidden = false;
-        setTimeout(function () {
-          if (success) success.hidden = true;
-        }, 6000);
-      }, 900);
+      // Preparar los datos del formulario
+      var formData = new FormData(form);
+
+      // Envío real a Netlify
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString()
+      })
+        .then(function (response) {
+          if (response.ok) {
+            form.reset();
+            if (success) success.hidden = false;
+
+            // Ocultar el mensaje de éxito automáticamente después de 6 segundos
+            setTimeout(function () {
+              if (success) success.hidden = true;
+            }, 6000);
+          } else {
+            alert("Hubo un error al enviar el formulario. Inténtalo de nuevo.");
+          }
+        })
+        .catch(function (error) {
+          console.error("Error al enviar:", error);
+          alert("Error de conexión. Inténtalo de nuevo.");
+        })
+        .finally(function () {
+          // Restaurar el botón al finalizar (éxito o error)
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Enviar mensaje";
+          }
+        });
     });
   }
 })();
