@@ -15,6 +15,7 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --radius: 20px;
   --nav-h: 76px;
+  --demo-h: 40px;
 }
 
 *,
@@ -96,7 +97,7 @@ main {
 
 .section {
   padding-block: clamp(5rem, 10vw, 8rem);
-  scroll-margin-top: calc(var(--nav-h) + 10px);
+  scroll-margin-top: calc(var(--nav-h) + var(--demo-h) + 10px);
 }
 
 .section-dark {
@@ -195,6 +196,20 @@ main {
 .btn-wa svg {
   width: 22px;
   height: 22px;
+}
+
+/* --------------------------------- Demo bar -------------------------------- */
+
+.demo-bar {
+  background: var(--color-main);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  line-height: 1.35;
 }
 
 /* ---------------------------------- Header --------------------------------- */
@@ -319,7 +334,7 @@ main {
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: calc(var(--nav-h) + clamp(2rem, 6vh, 4rem)) 0 clamp(4rem, 8vh, 6rem);
+  padding: calc(var(--nav-h) + var(--demo-h) + clamp(2rem, 6vh, 4rem)) 0 clamp(4rem, 8vh, 6rem);
   overflow: hidden;
   background: var(--color-dark);
   color: var(--color-text-dark);
