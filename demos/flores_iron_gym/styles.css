@@ -539,7 +539,8 @@ main {
 }
 
 .schedule-card {
-  background: var(--color-dark);
+  background: var(--color-dark-soft);
+  border: 1px solid var(--color-line-dark);
   color: var(--color-text-dark);
   border-radius: 24px;
   padding: clamp(1.6rem, 3vw, 2.4rem);
@@ -631,11 +632,58 @@ main {
 
 /* -------------------------------- ¿Por qué? --------------------------------- */
 
+.grid-why {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(1.2rem, 2.5vw, 1.8rem);
+  align-items: stretch;
+}
+
+.why-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.55rem;
+  background: linear-gradient(135deg, var(--color-main), #ff4d96);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: clamp(2rem, 4vw, 2.6rem) 1.5rem;
+  box-shadow: 0 30px 60px -28px rgba(255, 0, 110, 0.55);
+}
+
+.why-stat-google {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.why-stat-google svg {
+  width: 32px;
+  height: 32px;
+}
+
+.why-stat strong {
+  font-size: clamp(3rem, 6vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.why-stat-label {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+}
+
 .why-points {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1.2rem, 2.5vw, 1.8rem);
-  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.1rem, 2.2vw, 1.5rem);
 }
 
 .why-points li {
@@ -893,13 +941,16 @@ main {
     grid-template-columns: 1fr 1fr;
   }
 
-  .grid-reviews,
-  .why-points {
+  .grid-reviews {
     grid-template-columns: 1fr 1fr;
   }
 
   .grid-photos {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-why {
+    grid-template-columns: 1fr;
   }
 }
 
