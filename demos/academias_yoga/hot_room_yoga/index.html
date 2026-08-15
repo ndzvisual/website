@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Room Yoga · Hot Yoga y Bikram en el Microcentro de Buenos Aires</title>
+  <meta name="description" content="Hot Room Yoga: estudio de hot yoga y bikram en el Microcentro de Buenos Aires. Bikram 26 posturas, hot pilates, sala a 40 °C y 50 % de humedad, en una casa de 1920 en Esmeralda 754.">
+  <meta name="theme-color" content="#191310">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Hot Room Yoga">
+  <meta property="og:title" content="Hot Room Yoga · Hot Yoga y Bikram en el Microcentro de Buenos Aires">
+  <meta property="og:description" content="Bikram 26 posturas y hot pilates en sala a 40 °C, en una casa de 1920 del microcentro. Esmeralda 754, CABA. Reserva previa con cupos limitados.">
+  <meta property="og:image" content="assets/hero-sala.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD: YogaStudio / LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["YogaStudio", "LocalBusiness"],
+    "@id": "https://www.hotroomyogaoficial.com/#estudio",
+    "name": "Hot Room Yoga",
+    "description": "Estudio de hot yoga y bikram en el Microcentro de Buenos Aires. Bikram y hot pilates en sala aclimatada, en una casa de 1920.",
+    "url": "https://www.hotroomyogaoficial.com",
+    "email": "info@hotroomyogaoficial.com",
+    "image": "assets/hero-sala.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Esmeralda 754",
+      "addressLocality": "Microcentro, Ciudad Autónoma de Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/hotroomyoga",
+      "https://www.facebook.com/HotRoomYoga"
+    ],
+    /* placeholder: horarios reales del estudio — no inventar schedule */
+    "openingHours": ""
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Hot Room Yoga — inicio">
+        <svg class="logo-arch" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
+          <path d="M10 34 L10 18 A10 10 0 0 1 30 18 L30 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M14 11 q3 -2.5 6 0 t6 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 5 q2.5 -2 5 0 t5 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-word">HOT ROOM</span>
+          <span class="logo-sub">hot yoga · microcentro</span>
+        </span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <a href="#estudio">Estudio</a>
+        <a href="#clases">Clases</a>
+        <a href="#calor">Calor</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#precios">Precios</a>
+        <a href="#primera-clase">Primera clase</a>
+      </nav>
+
+      <a class="btn btn--primary btn--sm header-cta" href="#reserva">Reservar</a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+        <svg class="icon-menu" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="menu-overlay" id="menu-overlay" hidden></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" aria-label="Menú de navegación">
+    <div class="mobile-menu-top">
+      <a class="logo" href="#" aria-label="Hot Room Yoga — inicio">
+        <svg class="logo-arch" viewBox="0 0 40 40" width="28" height="28" aria-hidden="true">
+          <path d="M10 34 L10 18 A10 10 0 0 1 30 18 L30 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M14 11 q3 -2.5 6 0 t6 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M16 5 q2.5 -2 5 0 t5 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-word">HOT ROOM</span>
+          <span class="logo-sub">hot yoga · microcentro</span>
+        </span>
+      </a>
+      <button class="menu-close" id="menu-close" type="button" aria-label="Cerrar menú">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <a href="#estudio">Estudio</a>
+      <a href="#clases">Clases</a>
+      <a href="#calor">Calor</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#precios">Precios</a>
+      <a href="#primera-clase">Primera clase</a>
+    </nav>
+
+    <a class="btn btn--primary btn--block" href="#reserva">Reservar</a>
+
+    <div class="mobile-menu-contact">
+      <a href="mailto:info@hotroomyogaoficial.com?subject=Quiero%20reservar%20una%20clase&body=Hola%20Hot%20Room!%20Quiero%20reservar%20una%20clase.">info@hotroomyogaoficial.com</a>
+      <a href="https://instagram.com/hotroomyoga" target="_blank" rel="noopener">@hotroomyoga</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ 1 · HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <svg class="hero-arch" viewBox="0 0 200 200" aria-hidden="true">
+            <path class="arch-path" d="M30 176 L30 96 A70 70 0 0 1 170 96 L170 176" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" pathLength="100"/>
+            <path class="arch-path" d="M72 70 q14 -10 28 0 t28 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" pathLength="100"/>
+            <path class="arch-path" d="M78 52 q11 -8 22 0 t22 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" pathLength="100"/>
+            <path class="arch-path" d="M84 34 q8 -6 16 0 t16 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" pathLength="100"/>
+          </svg>
+
+          <p class="eyebrow eyebrow--dark" data-reveal><span class="deg">°</span> hot room yoga — esmeralda 754, microcentro</p>
+          <h1 data-reveal data-reveal-delay="60">Cuarenta grados de historia.</h1>
+          <p class="hero-lead" data-reveal data-reveal-delay="120">Hot Room se presenta como el primer estudio de hot yoga de la Argentina. Bikram y hot pilates en sala aclimatada, dentro de una casa de 1920 en pleno microcentro. El calor es el método.</p>
+
+          <div class="hero-ctas" data-reveal data-reveal-delay="180">
+            <a class="btn btn--primary" href="#reserva">Reservá tu clase</a>
+            <a class="btn btn--ghost-dark" href="#clases">Ver las clases</a>
+          </div>
+
+          <ul class="hero-chips" data-reveal data-reveal-delay="240">
+            <li>40 °c · 50 % humedad</li>
+            <li>bikram 90' · bikram 60' · hot pilates 60'</li>
+            <li>todos los niveles</li>
+          </ul>
+
+          <p class="hero-data" data-reveal data-reveal-delay="300">esmeralda 754 · casa de 1920 · 450 m² · sala de 100 m²</p>
+          <p class="attribution" data-reveal data-reveal-delay="340">primer estudio de hot yoga de la argentina — según el propio estudio</p>
+        </div>
+
+        <figure class="hero-figure" data-reveal data-reveal-delay="200">
+          <!-- placeholder: reemplazar por fotografía real del estudio (pedir permiso a @hotroomyoga) -->
+          <img src="assets/hero-sala.webp" alt="Sala de práctica de Hot Room Yoga: un grupo de alumnos practica sobre mats en el piso de madera, en un ambiente cálido y vaporoso" width="1100" height="1375" fetchpriority="high">
+          <figcaption class="caption">la sala — 40 °c</figcaption>
+        </figure>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="18" height="18">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ 2 · EL ESTUDIO ============ -->
+    <section class="section section--light" id="estudio">
+      <div class="container estudio-grid">
+        <div class="estudio-copy">
+          <p class="eyebrow" data-reveal><span class="deg">°</span> 01 — el estudio</p>
+          <h2 data-reveal data-reveal-delay="60">Una casa de 1920 que transpira historia.</h2>
+          <p data-reveal data-reveal-delay="120">En pleno microcentro, Esmeralda 754 guarda una casa de 1920: tres pisos, 450 m², pisos de pinotea y un techo abovedado con ladrillo a la vista, que se mantiene desde el diseño original.</p>
+          <p data-reveal data-reveal-delay="160">Adentro, la sala de práctica tiene 100 m² con extractor de oxígeno e ionización del ambiente: el lugar exacto para practicar a 40 °C.</p>
+
+          <ul class="checklist" data-reveal data-reveal-delay="200">
+            <li><span class="check-mark" aria-hidden="true">°</span>Casa de 1920 · 3 pisos · 450 m² en pleno microcentro</li>
+            <li><span class="check-mark" aria-hidden="true">°</span>Techo abovedado con ladrillo a la vista y pisos de pinotea</li>
+            <li><span class="check-mark" aria-hidden="true">°</span>Sala de práctica de 100 m²: extractor de oxígeno e ionización</li>
+            <li><span class="check-mark" aria-hidden="true">°</span>Vestuarios equipados, mats de yoga y guardado de bicicletas (bicifriendly)</li>
+            <!-- CONTENIDO DEMO: redacción del eje; los datos de la casa son verificados -->
+            <li><span class="check-mark" aria-hidden="true">°</span>Compromiso ecofriendly y bicifriendly</li>
+          </ul>
+
+          <div class="claim-box" data-reveal data-reveal-delay="240">
+            <p class="claim-title">Pioneros declarados</p>
+            <p class="claim-quote">Hot Room se presenta como el primer estudio de hot yoga de la Argentina — según el propio estudio.</p>
+          </div>
+
+          <p class="motto" data-reveal data-reveal-delay="280">lema del estudio — 'paz &amp; amor'</p>
+          <a class="btn btn--link" href="#clases" data-reveal data-reveal-delay="320">Ver las clases <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+
+        <figure class="estudio-figure" data-reveal data-reveal-delay="160">
+          <!-- placeholder: reemplazar por fotografía real del estudio (pedir permiso a @hotroomyoga) -->
+          <img src="assets/estudio-ladrillo.webp" alt="Pared de ladrillo a la vista con un arco de medio punto, en la casa de 1920 del estudio" width="1100" height="1375" loading="lazy">
+          <figcaption class="caption">el estudio — casa de 1920 · esmeralda 754</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 3 · CLASES ============ -->
+    <section class="section section--light" id="clases">
+      <div class="container clases-split">
+        <div class="clases-sticky">
+          <p class="eyebrow" data-reveal><span class="deg">°</span> 02 — clases</p>
+          <h2 data-reveal data-reveal-delay="60">Tres clases. Un método: el calor.</h2>
+          <p class="lead" data-reveal data-reveal-delay="120">Toda la práctica sucede en sala aclimatada. El calor es parte de la clase: prepara el cuerpo, acompaña el trabajo y exige tu concentración.</p>
+        </div>
+
+        <div class="clases-list">
+          <article class="class-card" data-reveal>
+            <p class="class-name">Yoga Bikram 90'</p>
+            <p class="class-desc">La serie original completa: 26 posturas (asanas) de Hatha Yoga + 2 ejercicios de respiración (pranayamas), para el fortalecimiento de columna. Apropiada para todas las edades y niveles.</p>
+            <p class="class-data">90 min · 40 °c · 50 % humedad · todos los niveles</p>
+            <a class="btn btn--primary" href="#reserva">Reservar</a>
+          </article>
+
+          <article class="class-card" data-reveal>
+            <p class="class-name">Yoga Bikram 60'</p>
+            <p class="class-desc">La misma serie en 60 minutos: mayor ritmo y menos repeticiones, para cuando el tiempo apremia pero la práctica no.</p>
+            <p class="class-data">60 min · 40 °c · 50 % humedad</p>
+            <a class="btn btn--primary" href="#reserva">Reservar</a>
+          </article>
+
+          <article class="class-card" data-reveal>
+            <p class="class-name">Hot Pilates 60'</p>
+            <p class="class-desc">Pilates + entrenamiento a intervalos de alta intensidad a bajo impacto (HIIT): resistencia física y quema de calorías, sin golpes.</p>
+            <p class="class-data">60 min · 35 °c · 50 % humedad · bajo impacto</p>
+            <a class="btn btn--primary" href="#reserva">Reservar</a>
+          </article>
+
+          <p class="mono-note" data-reveal>maestros certificados · clases para todas las edades y niveles</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4 · EL CALOR ============ -->
+    <section class="section section--dark" id="calor">
+      <div class="container">
+        <div class="calor-head">
+          <p class="eyebrow eyebrow--dark" data-reveal><span class="deg">°</span> 03 — el calor</p>
+          <h2 data-reveal data-reveal-delay="60">El calor es el gran potenciador de tu práctica.</h2>
+          <p class="lead lead--dark" data-reveal data-reveal-delay="120">Así define Hot Room su método. No es un detalle del ambiente: es la herramienta.</p>
+        </div>
+
+        <ol class="benefits">
+          <li data-reveal>
+            <span class="benefit-num" aria-hidden="true">01</span>
+            <div>
+              <h3>Mayor flexibilidad</h3>
+              <!-- CONTENIDO DEMO: frase descriptiva; el beneficio está verificado -->
+              <p>El calor prepara el músculo y amplía el rango de movimiento de cada postura.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="benefit-num" aria-hidden="true">02</span>
+            <div>
+              <h3>Circulación</h3>
+              <!-- CONTENIDO DEMO: frase descriptiva; el beneficio está verificado -->
+              <p>El trabajo a temperatura alta activa la circulación de todo el cuerpo.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="benefit-num" aria-hidden="true">03</span>
+            <div>
+              <h3>Desintoxicación por sudor</h3>
+              <!-- CONTENIDO DEMO: frase descriptiva; el beneficio está verificado -->
+              <p>El sudor es parte del entrenamiento: el cuerpo elimina y se regula.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="benefit-num" aria-hidden="true">04</span>
+            <div>
+              <h3>Menor riesgo de lesión</h3>
+              <!-- CONTENIDO DEMO: frase descriptiva; el beneficio está verificado -->
+              <p>El cuerpo caliente responde mejor al estiramiento y al esfuerzo.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span class="benefit-num" aria-hidden="true">05</span>
+            <div>
+              <h3>Concentración y determinación</h3>
+              <!-- CONTENIDO DEMO: frase descriptiva; el beneficio está verificado -->
+              <p>Sostener la práctica a 40 °C entrena la cabeza tanto como el cuerpo.</p>
+            </div>
+          </li>
+        </ol>
+
+        <figure class="calor-figure" data-reveal>
+          <!-- placeholder: reemplazar por fotografía real del estudio (pedir permiso a @hotroomyoga) -->
+          <img src="assets/calor-sala.webp" alt="La sala de práctica en acción, con luz cálida y vapor de la temperatura ambiente" width="1600" height="900" loading="lazy">
+        </figure>
+
+        <div class="testimonials">
+          <!-- CONTENIDO DEMO -->
+          <figure class="testimonial" data-reveal>
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote>La primera vez que entré a la sala pensé que no aguantaba. Salí renovada. Es adictivo.</blockquote>
+            <figcaption>— M., alumna</figcaption>
+          </figure>
+          <!-- CONTENIDO DEMO -->
+          <figure class="testimonial" data-reveal data-reveal-delay="60">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote>Vengo después del trabajo, salgo caminando por el microcentro flotando. La combinación calor + método es real.</blockquote>
+            <figcaption>— J., alumno</figcaption>
+          </figure>
+          <!-- CONTENIDO DEMO -->
+          <figure class="testimonial" data-reveal data-reveal-delay="120">
+            <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote>Es exigente, pero la guía es tan clara que cualquiera puede. El espacio es hermoso.</blockquote>
+            <figcaption>— C., alumna</figcaption>
+          </figure>
+        </div>
+
+        <div class="calor-cta" data-reveal>
+          <a class="btn btn--primary" href="#reserva">Reservá tu clase</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5 · HORARIOS ============ -->
+    <section class="section section--light" id="horarios">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="deg">°</span> 04 — horarios</p>
+        <h2 data-reveal data-reveal-delay="60">Clase con reserva previa y cupos limitados.</h2>
+        <p class="lead" data-reveal data-reveal-delay="120">Así funciona el estudio: elegís tu clase, reservás y te esperamos. La grilla cambia por mes y se confirma por mail o Instagram.</p>
+
+        <!-- CONTENIDO DEMO: grilla horaria ficticia y coherente (3 clases por día hábil, sábados por la mañana) -->
+        <div class="timetable-scroll" data-reveal data-reveal-delay="160">
+          <table class="timetable">
+            <caption class="visually-hidden">Grilla semanal de clases — contenido de demostración</caption>
+            <thead>
+              <tr>
+                <th scope="col">día</th>
+                <th scope="col">bikram 90</th>
+                <th scope="col">bikram 60</th>
+                <th scope="col">hot pilates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">lun</th>
+                <td><!-- placeholder: grilla real del estudio -->07:30</td>
+                <td><!-- placeholder: grilla real del estudio -->12:30</td>
+                <td><!-- placeholder: grilla real del estudio -->19:00</td>
+              </tr>
+              <tr>
+                <th scope="row">mar</th>
+                <td><!-- placeholder: grilla real del estudio -->07:30</td>
+                <td><!-- placeholder: grilla real del estudio -->12:30</td>
+                <td><!-- placeholder: grilla real del estudio -->20:15</td>
+              </tr>
+              <tr>
+                <th scope="row">mié</th>
+                <td><!-- placeholder: grilla real del estudio -->07:30</td>
+                <td><!-- placeholder: grilla real del estudio -->12:30</td>
+                <td><!-- placeholder: grilla real del estudio -->19:00</td>
+              </tr>
+              <tr>
+                <th scope="row">jue</th>
+                <td><!-- placeholder: grilla real del estudio -->07:30</td>
+                <td><!-- placeholder: grilla real del estudio -->12:30</td>
+                <td><!-- placeholder: grilla real del estudio -->20:15</td>
+              </tr>
+              <tr>
+                <th scope="row">vie</th>
+                <td><!-- placeholder: grilla real del estudio -->07:30</td>
+                <td><!-- placeholder: grilla real del estudio -->12:30</td>
+                <td><!-- placeholder: grilla real del estudio -->19:00</td>
+              </tr>
+              <tr>
+                <th scope="row">sáb</th>
+                <td><!-- placeholder: grilla real del estudio -->09:30</td>
+                <td><!-- placeholder: grilla real del estudio -->11:00</td>
+                <td><!-- placeholder: grilla real del estudio -->12:30</td>
+              </tr>
+              <tr>
+                <th scope="row">dom</th>
+                <td><!-- placeholder: grilla real del estudio -->—</td>
+                <td><!-- placeholder: grilla real del estudio -->—</td>
+                <td><!-- placeholder: grilla real del estudio -->—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mono-note" data-reveal>grilla vigente: consultá por mail o instagram <a href="mailto:info@hotroomyogaoficial.com?subject=Quiero%20consultar%20horarios&body=Hola%20Hot%20Room!%20Quiero%20consultar%20la%20grilla%20de%20horarios.">→</a></p>
+
+        <div class="horarios-cta" data-reveal>
+          <a class="btn btn--primary" href="#reserva">Reservar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6 · PRECIOS ============ -->
+    <section class="section section--surface" id="precios">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="deg">°</span> 05 — precios</p>
+        <h2 data-reveal data-reveal-delay="60">Abonos mensuales.</h2>
+        <p class="verified-line" data-reveal data-reveal-delay="120">Los abonos comienzan el 1 y terminan el último día del mes.</p>
+
+        <div class="pricing-card" data-reveal data-reveal-delay="160">
+          <p class="pricing-label">abono mensual</p>
+          <!-- placeholder: monto real del abono mensual -->
+          <p class="pricing-price">$ —</p>
+          <!-- CONTENIDO DEMO: redacción "valor a confirmar" -->
+          <p class="pricing-note">valor a confirmar por mail o instagram</p>
+          <p class="pricing-detail">clase con reserva previa · cupos limitados</p>
+          <div class="pricing-ctas">
+            <a class="btn btn--primary" href="#reserva">Consultá valores</a>
+            <a class="btn btn--ghost-light" href="https://instagram.com/hotroomyoga" target="_blank" rel="noopener">Seguinos en Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7 · PRIMERA CLASE ============ -->
+    <section class="section section--light" id="primera-clase">
+      <div class="container">
+        <p class="eyebrow" data-reveal><span class="deg">°</span> 06 — tu primera clase</p>
+        <h2 data-reveal data-reveal-delay="60">Primera vez en una sala a 40 °C.</h2>
+        <p class="lead" data-reveal data-reveal-delay="120">No hace falta experiencia previa: las clases son apropiadas para todas las edades y niveles. El proceso es simple.</p>
+
+        <ol class="steps">
+          <li data-reveal>
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3>Reservá</h3>
+            <p>Escribinos por mail o Instagram y confirmá tu día. La reserva es previa y los cupos son limitados.</p>
+          </li>
+          <li data-reveal>
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3>Completá la inscripción</h3>
+            <p>Se completa un formulario de inscripción; avisá sobre tu apto físico.</p>
+          </li>
+          <li data-reveal>
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3>Llegá 15 minutos antes</h3>
+            <p>El cuerpo necesita adaptarse al calor: ese tiempo es parte de la clase.</p>
+          </li>
+          <li data-reveal>
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3>Traé agua y toalla</h3>
+            <p>Y si no tenés mat, en el estudio hay alquiler disponible.</p>
+          </li>
+        </ol>
+
+        <div class="faq" data-reveal>
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1">
+                <span>¿Necesito experiencia previa?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-1" role="region" aria-label="Respuesta: ¿Necesito experiencia previa?">
+              <p>No. Las clases son apropiadas para todas las edades y niveles.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">
+                <span>¿Qué llevo?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-2" role="region" aria-label="Respuesta: ¿Qué llevo?">
+              <!-- CONTENIDO DEMO: "ropa cómoda" -->
+              <p>Agua, toalla y ropa cómoda. El mat se puede alquilar en el estudio.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">
+                <span>¿Dónde queda el estudio?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-3" role="region" aria-label="Respuesta: ¿Dónde queda el estudio?">
+              <p>Esmeralda 754, Microcentro, CABA: en una casa de 1920.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">
+                <span>¿Cómo reservo?</span>
+                <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-4" role="region" aria-label="Respuesta: ¿Cómo reservo?">
+              <p>Por mail o Instagram: te confirmamos día y horario. La reserva es previa.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="first-class-cta" data-reveal>
+          <a class="btn btn--primary" href="#reserva">Reservar mi primera clase</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8 · RESERVA ============ -->
+    <section class="section section--dark cta-band" id="reserva">
+      <div class="container">
+        <p class="eyebrow eyebrow--dark" data-reveal><span class="deg">°</span> 07 — reserva</p>
+        <h2 data-reveal data-reveal-delay="60">Reservá tu clase.</h2>
+        <p class="reserva-sub" data-reveal data-reveal-delay="120">Escribinos y te confirmamos el día y el horario. La reserva es previa: los cupos son limitados.</p>
+
+        <ul class="contact-options" data-reveal data-reveal-delay="180">
+          <li>
+            <a href="mailto:info@hotroomyogaoficial.com?subject=Quiero%20reservar%20una%20clase&body=Hola%20Hot%20Room!%20Quiero%20reservar%20una%20clase.">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>
+                <span class="contact-label">email</span>
+                <span class="contact-value">info@hotroomyogaoficial.com</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/hotroomyoga" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="3.8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="17" cy="7" r="1.2" fill="currentColor"/>
+              </svg>
+              <span>
+                <span class="contact-label">instagram</span>
+                <span class="contact-value">@hotroomyoga</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/HotRoomYoga" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path d="M14.5 8.5h3v-4h-3c-2.2 0-4 1.8-4 4v2.5h-2.5v4H10.5V20h4v-5h3l.8-4h-3.8V9c0-.3.2-.5.5-.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+              <span>
+                <span class="contact-label">facebook</span>
+                <span class="contact-value">/HotRoomYoga</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Esmeralda+754+Microcentro+Buenos+Aires" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path d="M12 21s-7-5.3-7-11a7 7 0 0 1 14 0c0 5.7-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <span>
+                <span class="contact-label">dirección</span>
+                <span class="contact-value">Esmeralda 754, Microcentro, CABA</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="reserva-note" data-reveal data-reveal-delay="220">primera clase: reserva previa · llegá 15' antes · completá la inscripción</p>
+
+        <div class="reserva-ctas" data-reveal data-reveal-delay="260">
+          <a class="btn btn--primary" href="mailto:info@hotroomyogaoficial.com?subject=Quiero%20reservar%20una%20clase&body=Hola%20Hot%20Room!%20Quiero%20reservar%20una%20clase.">Escribinos por mail</a>
+          <a class="btn btn--ghost-dark" href="https://instagram.com/hotroomyoga" target="_blank" rel="noopener">Seguinos en Instagram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo--dark" href="#" aria-label="Hot Room Yoga — inicio">
+          <svg class="logo-arch" viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
+            <path d="M10 34 L10 18 A10 10 0 0 1 30 18 L30 34" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M14 11 q3 -2.5 6 0 t6 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M16 5 q2.5 -2 5 0 t5 0" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-word">HOT ROOM</span>
+            <span class="logo-sub">hot yoga · microcentro</span>
+          </span>
+        </a>
+        <p class="footer-desc">Estudio de hot yoga en el microcentro de Buenos Aires. Bikram y hot pilates en una casa de 1920, con el calor como método.</p>
+        <p class="footer-motto">lema del estudio — 'paz &amp; amor'</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/hotroomyoga" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://facebook.com/HotRoomYoga" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <a href="#estudio">Estudio</a>
+        <a href="#clases">Clases</a>
+        <a href="#calor">Calor</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#precios">Precios</a>
+        <a href="#primera-clase">Primera clase</a>
+        <a href="#reserva">Reserva</a>
+      </nav>
+
+      <div class="footer-contact">
+        <a href="mailto:info@hotroomyogaoficial.com?subject=Quiero%20reservar%20una%20clase&body=Hola%20Hot%20Room!%20Quiero%20reservar%20una%20clase.">info@hotroomyogaoficial.com</a>
+        <a href="https://instagram.com/hotroomyoga" target="_blank" rel="noopener">IG @hotroomyoga</a>
+        <a href="https://facebook.com/HotRoomYoga" target="_blank" rel="noopener">FB HotRoomYoga</a>
+        <span>Esmeralda 754, Microcentro, CABA</span>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="container footer-legal-inner">
+        <p>© 2026 Hot Room Yoga · Demo comercial — NDZ VISUAL</p>
+        <p class="footer-attribution">primer estudio de hot yoga de la argentina — según el propio estudio</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING CTA (reserva por email/IG — sin canal de mensajería) ============ -->
+  <a class="floating-cta" href="#reserva" aria-label="Ir a reserva">
+    <span class="floating-cta-icon" aria-hidden="true">°</span>
+    <span class="floating-cta-tooltip">Reservar</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

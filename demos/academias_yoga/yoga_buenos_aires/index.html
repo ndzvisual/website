@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yoga Buenos Aires · Estudio de Yoga con 2 Sedes — Ashtanga Mysore y 22+ estilos</title>
+  <meta name="description" content="Yoga Buenos Aires: centro de yoga y bienestar integral con sedes en Almagro y Parque Centenario. Ashtanga estilo Mysore, más de 22 estilos, terapias, niños y yoga online. Reservá tu clase de prueba por WhatsApp.">
+  <meta name="theme-color" content="#F7F9EF">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 32'%3E%3Cg stroke='%23747D2B' stroke-width='3' stroke-linecap='round'%3E%3Cline x1='4' y1='30' x2='4' y2='16'/%3E%3Cline x1='12' y1='30' x2='12' y2='9'/%3E%3Cline x1='20' y1='30' x2='20' y2='2'/%3E%3C/g%3E%3C/svg%3E">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Yoga Buenos Aires · Estudio de Yoga con 2 Sedes — Ashtanga Mysore y 22+ estilos">
+  <meta property="og:description" content="Yoga Buenos Aires: centro de yoga y bienestar integral con sedes en Almagro y Parque Centenario. Ashtanga estilo Mysore, más de 22 estilos, terapias, niños y yoga online. Reservá tu clase de prueba por WhatsApp.">
+  <!-- CONTENIDO DEMO: foto real del estudio tomada de su sitio actual; pedir permiso para producción -->
+  <meta property="og:image" content="assets/hero-practica.jpg">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+  <!-- JSON-LD: HealthClub / YogaStudio / LocalBusiness
+       placeholder: agregar openingHoursSpecification cuando el estudio confirme horarios generales (solo los horarios Mysore verificados podrían expresarse de forma puntual; no se inventan horarios de apertura)
+       placeholder: confirmar URL de Facebook en sameAs (presencia verificada; URL estimada para la demo)
+       placeholder: definir priceRange real cuando el estudio confirme montos -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["HealthClub", "YogaStudio", "LocalBusiness"],
+    "name": "Yoga Buenos Aires",
+    "description": "Centro de yoga y bienestar integral con dos sedes en CABA: Ashtanga estilo Mysore, más de 22 estilos de clases, terapias, niños y yoga online.",
+    "image": "assets/hero-practica.jpg",
+    "logo": "assets/logo-yba.png",
+    "email": "estudioyogabuenosaires@gmail.com",
+    "telephone": "+54 11 2252-6326",
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Sede Almagro",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Gascón 50",
+          "addressLocality": "Almagro",
+          "addressRegion": "CABA",
+          "addressCountry": "AR"
+        }
+      },
+      {
+        "@type": "Place",
+        "name": "Sede Parque Centenario",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Díaz Vélez 4720",
+          "addressLocality": "Caballito",
+          "addressRegion": "CABA",
+          "addressCountry": "AR"
+        }
+      }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "reservas de clases",
+        "telephone": "+54 9 11 2252-6326",
+        "url": "https://wa.me/5491122526326",
+        "availableLanguage": "es"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "terapias complementarias",
+        "telephone": "+54 9 11 6023-4233",
+        "url": "https://wa.me/5491160234233",
+        "availableLanguage": "es"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/yogabuenosaires/",
+      "https://www.facebook.com/yogabuenosaires/"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Yoga Buenos Aires — volver al inicio">
+        <!-- CONTENIDO DEMO: logo real del estudio (del sitio actual); pedir archivo en alta resolución para producción -->
+        <img class="brand-logo" src="assets/logo-yba.png" alt="Yoga Buenos Aires" width="120" height="120">
+        <span class="brand-text">
+          <span class="brand-name">Yoga Buenos Aires</span>
+          <span class="brand-sub">estudio de yoga · 2 sedes</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#ashtanga">Ashtanga</a></li>
+          <li><a href="#estilos">Estilos</a></li>
+          <li><a href="#sedes">Sedes</a></li>
+          <li><a href="#membresia">Membresía</a></li>
+          <li><a href="#terapias">Terapias</a></li>
+          <li><a href="#primera-clase">Primera clase</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservá tu clase</a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MENÚ MÓVIL ============ -->
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-top">
+        <!-- CONTENIDO DEMO: logo real del estudio (del sitio actual); pedir archivo en alta resolución para producción -->
+        <img class="mobile-menu-logo" src="assets/logo-yba.png" alt="Yoga Buenos Aires" width="120" height="120">
+        <button class="menu-close" id="menu-close" type="button" aria-label="Cerrar menú">✕</button>
+      </div>
+      <nav class="mobile-nav" aria-label="Navegación móvil">
+        <ul>
+          <li><a href="#ashtanga">Ashtanga</a></li>
+          <li><a href="#estilos">Estilos</a></li>
+          <li><a href="#sedes">Sedes</a></li>
+          <li><a href="#membresia">Membresía</a></li>
+          <li><a href="#terapias">Terapias</a></li>
+          <li><a href="#ninos">Niños y talleres</a></li>
+          <li><a href="#primera-clase">Primera clase</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-cta">
+        <a class="btn btn-primary btn-block" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservá tu clase de prueba</a>
+      </div>
+      <ul class="mobile-menu-links">
+        <li><a class="btn-link on-dark" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">WhatsApp clases</a></li>
+        <li><a class="btn-link on-dark" href="https://wa.me/5491160234233?text=Hola!%20Quiero%20consultar%20por%20un%20turno%20de%20terapias." target="_blank" rel="noopener" aria-label="Consultar turnos de terapias por WhatsApp">WhatsApp terapias</a></li>
+        <li><a class="btn-link on-dark" href="https://www.instagram.com/yogabuenosaires/" target="_blank" rel="noopener">Instagram @yogabuenosaires</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="contenido">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top" aria-label="Presentación de Yoga Buenos Aires">
+      <div class="hero-media" aria-hidden="true">
+        <!-- CONTENIDO DEMO: foto real del estudio tomada de su sitio actual; pedir permiso para producción -->
+        <img src="assets/hero-practica.webp" alt="" width="1280" height="960" fetchpriority="high">
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-serie" aria-hidden="true">
+        <svg viewBox="0 0 244 112" fill="none" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <line x1="4" y1="110" x2="4" y2="70" pathLength="1"/>
+            <line x1="22" y1="110" x2="22" y2="50" pathLength="1"/>
+            <line x1="40" y1="110" x2="40" y2="30" pathLength="1"/>
+            <line x1="58" y1="110" x2="58" y2="10" pathLength="1"/>
+            <line x1="76" y1="110" x2="76" y2="70" pathLength="1"/>
+            <line x1="94" y1="110" x2="94" y2="50" pathLength="1"/>
+            <line x1="112" y1="110" x2="112" y2="30" pathLength="1"/>
+            <line x1="130" y1="110" x2="130" y2="70" pathLength="1"/>
+            <line x1="148" y1="110" x2="148" y2="50" pathLength="1"/>
+            <line x1="166" y1="110" x2="166" y2="30" pathLength="1"/>
+            <line x1="184" y1="110" x2="184" y2="10" pathLength="1"/>
+            <line x1="202" y1="110" x2="202" y2="70" pathLength="1"/>
+            <line x1="220" y1="110" x2="220" y2="50" pathLength="1"/>
+            <line x1="238" y1="110" x2="238" y2="30" pathLength="1"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
+        <!-- CONTENIDO DEMO: logo real del estudio (del sitio actual); pedir archivo en alta resolución para producción -->
+        <img class="hero-logo" src="assets/logo-yba.png" alt="Yoga Buenos Aires" width="120" height="120">
+        <p class="eyebrow on-dark">
+          <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+            <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+              <line x1="2" y1="30" x2="2" y2="16"/>
+              <line x1="10" y1="30" x2="10" y2="9"/>
+              <line x1="18" y1="30" x2="18" y2="2"/>
+            </g>
+          </svg>
+          <span>estudio de yoga · 2 sedes · almagro + parque centenario</span>
+        </p>
+        <h1>El yoga para todos, con raíces tradicionales.</h1>
+        <p class="hero-lead">Yoga Buenos Aires es un centro de yoga y bienestar integral con dos sedes en la ciudad: Ashtanga estilo Mysore, más de 22 estilos de clases, terapias, niños y yoga online. Todas las clases son aptas para principiantes.</p>
+        <p class="hero-slogan">relajá. respirá. vení a practicar con nosotros.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservá tu clase de prueba</a>
+          <a class="btn btn-ghost-dark" href="#ashtanga">Conocé la práctica Mysore</a>
+        </div>
+        <ul class="hero-chips" aria-label="Resumen del estudio">
+          <li class="chip">ashtanga estilo mysore</li>
+          <li class="chip">22+ estilos · todos los niveles</li>
+          <li class="chip">2 sedes · 1 membresía</li>
+        </ul>
+        <p class="hero-data">gascón 50, almagro · díaz vélez 4720, caballito</p>
+        <a class="scroll-cue" href="#ashtanga" aria-hidden="true" tabindex="-1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ ASHTANGA ============ -->
+    <section class="section section-dark" id="ashtanga" aria-labelledby="ashtanga-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow on-dark">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>01 · la práctica tradicional</span>
+          </p>
+          <h2 id="ashtanga-title">Ashtanga estilo Mysore: tu propia serie, a tu ritmo.</h2>
+          <p class="section-lead">La especialidad de la casa: práctica individual en grupo, guiada según el nivel de cada persona. No seguís una clase: seguís tu propia serie, con la guía del profesor al lado.</p>
+          <!-- CONTENIDO DEMO: redacción; la especialidad Mysore y la práctica individual guiada son verificadas -->
+        </div>
+
+        <div class="ashtanga-grid">
+          <div class="ashtanga-left">
+            <ul class="checklist on-dark">
+              <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Práctica individual en grupo, con guía personalizada</span></li>
+              <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Entrada y salida flexible: hasta 40 minutos antes del final de la franja</span></li>
+              <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Práctica individual de 30 a 90 minutos</span></li>
+              <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>También: Ashtanga Guiada, con secuencia fija al ritmo de la profesora</span></li>
+              <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Método tradicional con raíces en la práctica de Mysore, India</span></li>
+              <!-- CONTENIDO DEMO: redacción de framing; el estilo Mysore es verificado -->
+            </ul>
+          </div>
+
+          <div class="ashtanga-right">
+            <figure class="photo-figure photo-45">
+              <!-- CONTENIDO DEMO: foto real del estudio tomada de su sitio actual; pedir permiso para producción -->
+              <img src="assets/ashtanga.webp" alt="práctica de ashtanga en el estudio" width="720" height="960" loading="lazy">
+            </figure>
+
+            <div class="mysore-block">
+              <p class="mysore-sub">sede parque centenario — díaz vélez 4720</p>
+              <div class="mysore-rows">
+                <div class="mysore-row"><span class="mysore-day">LUN</span><span class="mysore-time">7:00–10:00</span></div>
+                <div class="mysore-row"><span class="mysore-day">MAR</span><span class="mysore-time">7:00–9:00</span></div>
+                <div class="mysore-row"><span class="mysore-day">MIÉ</span><span class="mysore-time">7:00–11:00</span></div>
+                <div class="mysore-row"><span class="mysore-day">JUE</span><span class="mysore-time">11:00–14:00</span></div>
+                <div class="mysore-row"><span class="mysore-day">VIE</span><span class="mysore-time">7:00–11:00</span></div>
+                <div class="mysore-row is-guided"><span class="mysore-day">MAR</span><span class="mysore-time">19:00–20:30</span><span class="mysore-tag">guiada</span></div>
+              </div>
+            </div>
+
+            <div class="mysore-block">
+              <p class="mysore-sub">sede almagro — gascón 50</p>
+              <div class="mysore-rows">
+                <div class="mysore-row"><span class="mysore-day">LUN</span><span class="mysore-time">18:30–20:30</span></div>
+                <div class="mysore-row"><span class="mysore-day">MIÉ</span><span class="mysore-time">18:30–20:30</span></div>
+                <div class="mysore-row"><span class="mysore-day">VIE</span><span class="mysore-time">18:30–20:30</span></div>
+                <div class="mysore-row"><span class="mysore-day">JUE</span><span class="mysore-time">19:30–21:00</span></div>
+                <div class="mysore-row is-guided"><span class="mysore-day">SÁB</span><span class="mysore-time">11:00–12:30</span><span class="mysore-tag">guiada</span></div>
+              </div>
+            </div>
+
+            <p class="mysore-note">práctica individual de 30 a 90 minutos · entrada hasta 40' antes del final · reserva previa por whatsapp</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-wrap">
+        <div class="quote-serie" aria-hidden="true">
+          <svg viewBox="0 0 244 112" fill="none" focusable="false">
+            <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+              <line x1="4" y1="110" x2="4" y2="70"/>
+              <line x1="22" y1="110" x2="22" y2="50"/>
+              <line x1="40" y1="110" x2="40" y2="30"/>
+              <line x1="58" y1="110" x2="58" y2="10"/>
+              <line x1="76" y1="110" x2="76" y2="70"/>
+              <line x1="94" y1="110" x2="94" y2="50"/>
+              <line x1="112" y1="110" x2="112" y2="30"/>
+              <line x1="130" y1="110" x2="130" y2="70"/>
+              <line x1="148" y1="110" x2="148" y2="50"/>
+              <line x1="166" y1="110" x2="166" y2="30"/>
+              <line x1="184" y1="110" x2="184" y2="10"/>
+              <line x1="202" y1="110" x2="202" y2="70"/>
+              <line x1="220" y1="110" x2="220" y2="50"/>
+              <line x1="238" y1="110" x2="238" y2="30"/>
+            </g>
+          </svg>
+        </div>
+        <blockquote class="jois-quote">
+          <p>«Practicá, practicá, y todo llega…»</p>
+          <cite>Sri Pattabhi Jois</cite>
+        </blockquote>
+      </div>
+
+      <div class="container">
+        <p class="team-line">equipo de profesores: maite · jennifer · alejandra · andrea · verónica · mariel · bárbara</p>
+        <div class="cta-center">
+          <a class="btn btn-primary" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservá tu clase de prueba</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ESTILOS ============ -->
+    <section class="section" id="estilos" aria-labelledby="estilos-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>02 · estilos</span>
+          </p>
+          <h2 id="estilos-title">Más de 22 estilos, una sola membresía.</h2>
+          <p class="section-lead">Del método tradicional al flow, del yoga en silla al wheel: con tu membresía accedés a todos los estilos, todos los profesores y todas las sedes.</p>
+          <!-- CONTENIDO DEMO: redacción; la membresía global multi-sede es verificada -->
+        </div>
+
+        <div class="family-grid">
+          <article class="family-card reveal">
+            <h3>Ashtanga</h3>
+            <ul>
+              <li>Ashtanga estilo Mysore</li>
+              <li>Ashtanga Guiada</li>
+            </ul>
+            <p class="card-demo">El método tradicional de la casa: práctica individual o guiada, con secuencia fija.</p>
+            <!-- CONTENIDO DEMO: descripción -->
+          </article>
+
+          <article class="family-card reveal">
+            <h3>Clásicos</h3>
+            <ul>
+              <li>Yoga Integral (asanas + pranayama + relajación + meditación)</li>
+              <li>Hatha Yoga Tradicional</li>
+              <li>Hatha Intensivo</li>
+              <li>Hatha Dinámico</li>
+            </ul>
+            <p class="card-demo">Clases completas y posturas sostenidas, a distintas intensidades.</p>
+            <!-- CONTENIDO DEMO: descripción -->
+          </article>
+
+          <article class="family-card reveal">
+            <h3>Flow y Vinyasa</h3>
+            <ul>
+              <li>Yoga Flow</li>
+              <li>Vinyasa Power Flow</li>
+              <li>Vinyasa Slow Flow / Stretch</li>
+              <li>Vinyasa Danzado</li>
+            </ul>
+            <p class="card-demo">Secuencias fluidas y dinámicas, a distintos ritmos.</p>
+            <!-- CONTENIDO DEMO: descripción -->
+          </article>
+
+          <article class="family-card reveal">
+            <h3>Accesibles</h3>
+            <ul>
+              <li>Yoga en silla</li>
+              <li>Yoga Adultos Mayores</li>
+              <li>Yoga Terapéutico + Osteopatía (Mariel)</li>
+              <li>Yoga Fuerza y Flex</li>
+            </ul>
+            <p class="card-demo">Propuestas para todas las edades y condiciones físicas.</p>
+            <!-- CONTENIDO DEMO: descripción -->
+          </article>
+
+          <article class="family-card reveal">
+            <h3>Especiales</h3>
+            <ul>
+              <li>Yoga y Esferodinamia (Maite)</li>
+              <li>Yoga Wheel (Jennifer)</li>
+              <li>Yoga + Mindfulness</li>
+              <li>Mindfulness (Meditación)</li>
+              <li>Yoga ANTIDOMINGO (Bárbara)</li>
+              <li>Biodanza – Técnica MaPa (Lic. Perla)</li>
+              <li>Tai Chi (Chi Kung)</li>
+              <li>Pilates Mat</li>
+            </ul>
+            <p class="card-demo">Clases para momentos, cuerpos y gustos específicos.</p>
+            <!-- CONTENIDO DEMO: descripción -->
+          </article>
+
+          <article class="family-card reveal">
+            <h3>Yoga ONLINE</h3>
+            <ul>
+              <li>Clases transmitidas en vivo</li>
+            </ul>
+            <p class="card-demo">La práctica de siempre, desde tu casa: horarios por WhatsApp.</p>
+            <!-- CONTENIDO DEMO: descripción parcial; el canal por WhatsApp es verificado -->
+          </article>
+        </div>
+
+        <p class="mono-note">todas nuestras clases son aptas principiantes</p>
+        <div class="cta-center">
+          <a class="btn btn-ghost-light" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Consultar horarios por WhatsApp">Consultá horarios</a>
+          <p class="cta-note">la grilla completa de todas las clases se confirma por WhatsApp</p>
+          <!-- CONTENIDO DEMO: redacción -->
+        </div>
+      </div>
+      <div class="serie-divider" aria-hidden="true">
+        <svg viewBox="0 0 146 26" fill="none" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <line x1="2" y1="24" x2="2" y2="16"/><line x1="12" y1="24" x2="12" y2="12"/><line x1="22" y1="24" x2="22" y2="8"/><line x1="32" y1="24" x2="32" y2="4"/>
+            <line x1="44" y1="24" x2="44" y2="16"/><line x1="54" y1="24" x2="54" y2="12"/><line x1="64" y1="24" x2="64" y2="8"/>
+            <line x1="82" y1="24" x2="82" y2="16"/><line x1="92" y1="24" x2="92" y2="12"/><line x1="102" y1="24" x2="102" y2="8"/><line x1="112" y1="24" x2="112" y2="4"/>
+            <line x1="124" y1="24" x2="124" y2="16"/><line x1="134" y1="24" x2="134" y2="12"/><line x1="144" y1="24" x2="144" y2="8"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ SEDES ============ -->
+    <section class="section section-surface" id="sedes" aria-labelledby="sedes-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>03 · sedes</span>
+          </p>
+          <h2 id="sedes-title">Dos sedes, una sola práctica.</h2>
+        </div>
+
+        <blockquote class="verbatim">Con tu membresía: todos los estilos, todos los profes, en todas las sedes.</blockquote>
+
+        <div class="sedes-grid">
+          <article class="sede-card reveal">
+            <p class="sede-num">sede 01 · almagro</p>
+            <p class="sede-address">Gascón 50, Almagro, CABA</p>
+            <p class="sede-data">ashtanga mysore: lun · mié · vie 18.30–20.30 · jue 19.30–21 · sáb 11–12.30 guiada</p>
+            <figure class="photo-figure photo-43">
+              <!-- CONTENIDO DEMO: foto real del estudio tomada de su sitio actual; pedir permiso para producción -->
+              <img src="assets/equipo.webp" alt="sala y equipo del estudio en la sede Almagro" width="720" height="962" loading="lazy">
+            </figure>
+            <div class="sede-ctas">
+              <a class="btn btn-ghost-light" href="https://www.google.com/maps/search/?api=1&amp;query=Gasc%C3%B3n%2050%2C%20Almagro%2C%20CABA" target="_blank" rel="noopener">Cómo llegar</a>
+              <a class="btn-link" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservar</a>
+            </div>
+          </article>
+
+          <article class="sede-card reveal">
+            <p class="sede-num">sede 02 · parque centenario</p>
+            <p class="sede-address">Díaz Vélez 4720, Caballito, CABA</p>
+            <p class="sede-data">ashtanga mysore: lun 7–10 · mar 7–9 · mié 7–11 · jue 11–14 · vie 7–11 · mar 19–20.30 guiada</p>
+            <figure class="photo-figure photo-43">
+              <!-- CONTENIDO DEMO: foto real del estudio tomada de su sitio actual; pedir permiso para producción -->
+              <img src="assets/ninos.webp" alt="actividad del estudio en la sede Parque Centenario" width="768" height="576" loading="lazy">
+            </figure>
+            <div class="sede-ctas">
+              <a class="btn btn-ghost-light" href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%ADaz%20V%C3%A9lez%204720%2C%20Caballito%2C%20CABA" target="_blank" rel="noopener">Cómo llegar</a>
+              <a class="btn-link" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservar</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="mono-note">las dos sedes comparten la misma membresía · todas las clases aptas principiantes</p>
+        <!-- CONTENIDO DEMO: redacción de la segunda parte; la membresía compartida es verificada -->
+      </div>
+      <div class="serie-divider" aria-hidden="true">
+        <svg viewBox="0 0 146 26" fill="none" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <line x1="2" y1="24" x2="2" y2="16"/><line x1="12" y1="24" x2="12" y2="12"/><line x1="22" y1="24" x2="22" y2="8"/><line x1="32" y1="24" x2="32" y2="4"/>
+            <line x1="44" y1="24" x2="44" y2="16"/><line x1="54" y1="24" x2="54" y2="12"/><line x1="64" y1="24" x2="64" y2="8"/>
+            <line x1="82" y1="24" x2="82" y2="16"/><line x1="92" y1="24" x2="92" y2="12"/><line x1="102" y1="24" x2="102" y2="8"/><line x1="112" y1="24" x2="112" y2="4"/>
+            <line x1="124" y1="24" x2="124" y2="16"/><line x1="134" y1="24" x2="134" y2="12"/><line x1="144" y1="24" x2="144" y2="8"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ MEMBRESÍA ============ -->
+    <section class="section" id="membresia" aria-labelledby="membresia-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>04 · membresía y precios</span>
+          </p>
+          <h2 id="membresia-title">Una membresía, todo el estudio.</h2>
+        </div>
+
+        <blockquote class="verbatim">Con tu membresía podés acceder a todos los estilos, todos los profes, en todas las sedes, cualquier día y en cualquier horario, sin pagar de más.</blockquote>
+
+        <div class="pricing-card reveal">
+          <p class="pricing-label">membresía mensual</p>
+          <!-- placeholder: monto real de la membresía mensual -->
+          <p class="pricing-price">$ —</p>
+          <p class="pricing-note">valor a confirmar por WhatsApp</p>
+          <!-- CONTENIDO DEMO: redacción -->
+          <ul class="checklist">
+            <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Clase de prueba con costo que se descuenta de tu membresía dentro del mismo mes</span></li>
+            <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Clases perdidas: se recuperan dentro del mismo mes</span></li>
+            <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Cancelación: hasta 3 horas antes</span></li>
+            <li><span class="serie-check" aria-hidden="true"><svg viewBox="0 0 24 32" fill="none"><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="2" y1="30" x2="2" y2="16"/><line x1="10" y1="30" x2="10" y2="9"/><line x1="18" y1="30" x2="18" y2="2"/></g></svg></span><span>Feriados: cerrado, con clase especial en Parque Centenario (anunciada en Instagram)</span></li>
+          </ul>
+          <p class="pricing-partner">wellhub partner</p>
+          <!-- CONTENIDO DEMO: presencia verificada; sin inventar condiciones del acuerdo -->
+          <div class="pricing-ctas">
+            <a class="btn btn-primary" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Consultá valores por WhatsApp</a>
+            <a class="btn btn-ghost-light" href="#primera-clase">Cómo es tu primera clase</a>
+          </div>
+        </div>
+      </div>
+      <div class="serie-divider" aria-hidden="true">
+        <svg viewBox="0 0 146 26" fill="none" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <line x1="2" y1="24" x2="2" y2="16"/><line x1="12" y1="24" x2="12" y2="12"/><line x1="22" y1="24" x2="22" y2="8"/><line x1="32" y1="24" x2="32" y2="4"/>
+            <line x1="44" y1="24" x2="44" y2="16"/><line x1="54" y1="24" x2="54" y2="12"/><line x1="64" y1="24" x2="64" y2="8"/>
+            <line x1="82" y1="24" x2="82" y2="16"/><line x1="92" y1="24" x2="92" y2="12"/><line x1="102" y1="24" x2="102" y2="8"/><line x1="112" y1="24" x2="112" y2="4"/>
+            <line x1="124" y1="24" x2="124" y2="16"/><line x1="134" y1="24" x2="134" y2="12"/><line x1="144" y1="24" x2="144" y2="8"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ TERAPIAS ============ -->
+    <section class="section" id="terapias" aria-labelledby="terapias-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>05 · terapias</span>
+          </p>
+          <h2 id="terapias-title">Terapias complementarias, en consultorios propios.</h2>
+          <p class="section-lead">El estudio también tiene consultorios propios, atendidos por doctores, psicólogos, kinesiólogos y masajistas.</p>
+        </div>
+
+        <ul class="therapy-grid">
+          <li class="therapy-cell reveal">Acupuntura</li>
+          <li class="therapy-cell reveal">Medicina Homeopática</li>
+          <li class="therapy-cell reveal">Osteopatía</li>
+          <li class="therapy-cell reveal">Masaje de Fuego</li>
+          <li class="therapy-cell reveal">Vidas Pasadas</li>
+          <li class="therapy-cell reveal">Biodecodificación</li>
+          <li class="therapy-cell reveal">Terapia Neurocorporal</li>
+        </ul>
+
+        <p class="mono-note">turnos y consultas por el whatsapp de terapias</p>
+        <!-- CONTENIDO DEMO: redacción -->
+        <div class="cta-center">
+          <a class="btn btn-ghost-light" href="https://wa.me/5491160234233?text=Hola!%20Quiero%20consultar%20por%20un%20turno%20de%20terapias." target="_blank" rel="noopener" aria-label="Consultar turnos de terapias por WhatsApp">Turnos de terapias</a>
+        </div>
+      </div>
+      <div class="serie-divider" aria-hidden="true">
+        <svg viewBox="0 0 146 26" fill="none" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <line x1="2" y1="24" x2="2" y2="16"/><line x1="12" y1="24" x2="12" y2="12"/><line x1="22" y1="24" x2="22" y2="8"/><line x1="32" y1="24" x2="32" y2="4"/>
+            <line x1="44" y1="24" x2="44" y2="16"/><line x1="54" y1="24" x2="54" y2="12"/><line x1="64" y1="24" x2="64" y2="8"/>
+            <line x1="82" y1="24" x2="82" y2="16"/><line x1="92" y1="24" x2="92" y2="12"/><line x1="102" y1="24" x2="102" y2="8"/><line x1="112" y1="24" x2="112" y2="4"/>
+            <line x1="124" y1="24" x2="124" y2="16"/><line x1="134" y1="24" x2="134" y2="12"/><line x1="144" y1="24" x2="144" y2="8"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ NIÑOS Y TALLERES ============ -->
+    <section class="section section-surface" id="ninos" aria-labelledby="ninos-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>06 · niños y talleres</span>
+          </p>
+          <h2 id="ninos-title">La práctica, para toda la familia.</h2>
+        </div>
+
+        <div class="kids-grid">
+          <article class="kid-card reveal">
+            <h3>Estimulación temprana para bebés</h3>
+            <p class="kid-attribution">A cargo de la Dra. Luciana Magliocco, pediatra.</p>
+            <p class="card-demo">Un espacio pensado para los más chiquitos y sus familias.</p>
+            <!-- CONTENIDO DEMO: descripción -->
+          </article>
+
+          <article class="kid-card reveal">
+            <h3>Yoga para niños y adolescentes</h3>
+            <p class="kid-attribution">Con Carolina.</p>
+            <p class="card-demo">Clases lúdicas para que los chicos también tengan su práctica.</p>
+            <!-- CONTENIDO DEMO: descripción -->
+          </article>
+
+          <article class="kid-card kid-card-photo reveal">
+            <figure class="photo-figure photo-32">
+              <!-- CONTENIDO DEMO: foto real del estudio tomada de su sitio actual; pedir permiso para producción -->
+              <img src="assets/talleres.webp" alt="taller del estudio" width="720" height="960" loading="lazy">
+            </figure>
+            <h3>Talleres</h3>
+            <p class="kid-attribution">Meditación, cuencos, mantras, pranayama y profesores invitados.</p>
+            <p class="card-demo">Fechas y novedades se anuncian en Instagram.</p>
+            <!-- CONTENIDO DEMO: redacción -->
+          </article>
+        </div>
+
+        <div class="online-band">
+          <p class="online-label">yoga online</p>
+          <p class="online-text">Clases transmitidas en vivo, horarios por WhatsApp.</p>
+          <a class="btn-link" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Consultar horarios por WhatsApp">Consultá horarios</a>
+        </div>
+
+        <div class="cta-center">
+          <a class="btn btn-ghost-light" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Consultar horarios por WhatsApp">Consultá horarios</a>
+        </div>
+      </div>
+      <div class="serie-divider" aria-hidden="true">
+        <svg viewBox="0 0 146 26" fill="none" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <line x1="2" y1="24" x2="2" y2="16"/><line x1="12" y1="24" x2="12" y2="12"/><line x1="22" y1="24" x2="22" y2="8"/><line x1="32" y1="24" x2="32" y2="4"/>
+            <line x1="44" y1="24" x2="44" y2="16"/><line x1="54" y1="24" x2="54" y2="12"/><line x1="64" y1="24" x2="64" y2="8"/>
+            <line x1="82" y1="24" x2="82" y2="16"/><line x1="92" y1="24" x2="92" y2="12"/><line x1="102" y1="24" x2="102" y2="8"/><line x1="112" y1="24" x2="112" y2="4"/>
+            <line x1="124" y1="24" x2="124" y2="16"/><line x1="134" y1="24" x2="134" y2="12"/><line x1="144" y1="24" x2="144" y2="8"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ PRIMERA CLASE ============ -->
+    <section class="section" id="primera-clase" aria-labelledby="primera-clase-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>07 · tu primera clase</span>
+          </p>
+          <h2 id="primera-clase-title">Tu primera clase, paso a paso.</h2>
+          <p class="section-lead">No hace falta experiencia: todas nuestras clases son aptas principiantes.</p>
+        </div>
+
+        <ol class="steps-grid">
+          <li class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Escribinos por WhatsApp</h3>
+            <p>Contanos que querés probar y coordinamos el día y la sede.</p>
+            <!-- CONTENIDO DEMO: redacción; el canal WhatsApp es verificado -->
+          </li>
+          <li class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Elegí estilo y sede</h3>
+            <p>Almagro o Parque Centenario: la clase que más te llame.</p>
+            <!-- CONTENIDO DEMO: redacción -->
+          </li>
+          <li class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Pagá la clase de prueba</h3>
+            <p>Tiene un costo que se descuenta de tu membresía dentro del mismo mes.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">04</span>
+            <h3>Practicá</h3>
+            <p>Llegá, respirá y probá. Después decidís cómo seguir.</p>
+            <!-- CONTENIDO DEMO: redacción -->
+          </li>
+        </ol>
+
+        <p class="policy-note">clases perdidas se recuperan dentro del mismo mes · cancelación hasta 3 horas antes · feriados: cerrado con clase especial en Parque Centenario (anunciada en Instagram)</p>
+
+        <div class="faq-wrap">
+          <div class="faq-item">
+            <button class="faq-button" id="faq-button-1" type="button" aria-expanded="false" aria-controls="faq-panel-1">
+              <span>¿Necesito experiencia previa?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-button-1">
+              <div class="faq-panel-inner">
+                <p>No: todas nuestras clases son aptas principiantes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" id="faq-button-2" type="button" aria-expanded="false" aria-controls="faq-panel-2">
+              <span>¿Cómo reservo?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-button-2">
+              <div class="faq-panel-inner">
+                <p>Por WhatsApp al +54 9 11 2252-6326. La reserva es previa en todas las clases.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-button" id="faq-button-3" type="button" aria-expanded="false" aria-controls="faq-panel-3">
+              <span>¿La clase de prueba se descuenta?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-button-3">
+              <div class="faq-panel-inner">
+                <p>Sí: tiene un costo que se descuenta de tu membresía mensual dentro del mismo mes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-center">
+          <a class="btn btn-primary" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservá tu clase de prueba</a>
+        </div>
+      </div>
+      <div class="serie-divider" aria-hidden="true">
+        <svg viewBox="0 0 146 26" fill="none" focusable="false">
+          <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+            <line x1="2" y1="24" x2="2" y2="16"/><line x1="12" y1="24" x2="12" y2="12"/><line x1="22" y1="24" x2="22" y2="8"/><line x1="32" y1="24" x2="32" y2="4"/>
+            <line x1="44" y1="24" x2="44" y2="16"/><line x1="54" y1="24" x2="54" y2="12"/><line x1="64" y1="24" x2="64" y2="8"/>
+            <line x1="82" y1="24" x2="82" y2="16"/><line x1="92" y1="24" x2="92" y2="12"/><line x1="102" y1="24" x2="102" y2="8"/><line x1="112" y1="24" x2="112" y2="4"/>
+            <line x1="124" y1="24" x2="124" y2="16"/><line x1="134" y1="24" x2="134" y2="12"/><line x1="144" y1="24" x2="144" y2="8"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ RESERVA ============ -->
+    <section class="section section-dark section-cta" id="reserva" aria-labelledby="reserva-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow on-dark">
+            <svg class="serie-mini" viewBox="0 0 24 32" aria-hidden="true" focusable="false">
+              <g stroke="currentColor" stroke-width="1.5" stroke-linecap="round" vector-effect="non-scaling-stroke">
+                <line x1="2" y1="30" x2="2" y2="16"/>
+                <line x1="10" y1="30" x2="10" y2="9"/>
+                <line x1="18" y1="30" x2="18" y2="2"/>
+              </g>
+            </svg>
+            <span>08 · reserva y contacto</span>
+          </p>
+          <h2 id="reserva-title">Reservá tu clase o tu turno.</h2>
+          <p class="section-lead">Escribinos por WhatsApp y te confirmamos. La reserva es previa en todas las clases.</p>
+          <!-- CONTENIDO DEMO: redacción de la segunda frase; reserva previa es verificado -->
+        </div>
+
+        <ul class="contact-grid">
+          <li class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.6a8.4 8.4 0 0 0-7.2 12.6L3.5 20.5l4.4-1.2A8.4 8.4 0 1 0 12 3.6Z"/><path d="M9.1 8.3c-.4 0-.8.1-1.1.5-.6.7-.9 1.7-.2 3 1 2 2.4 3.5 4.5 4.5.6.3 1.2.5 1.7.4.5-.1 1.3-.6 1.5-1.3.1-.3 0-.6-.1-.7l-1.3-.7c-.3-.2-.6-.2-.8.1l-.4.5c-.1.1-.2.2-.5 0a6.4 6.4 0 0 1-2.2-1.7c-.4-.4-.6-.8-.6-1 .1-.1.2-.3.3-.4.2-.2.2-.5.1-.7l-.7-1.2c-.2-.3-.4-.4-.6-.4Z"/></svg>
+            <div>
+              <p class="contact-label">WhatsApp clases y reservas</p>
+              <a class="contact-value" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">+54 9 11 2252-6326</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.6a8.4 8.4 0 0 0-7.2 12.6L3.5 20.5l4.4-1.2A8.4 8.4 0 1 0 12 3.6Z"/><path d="M9.1 8.3c-.4 0-.8.1-1.1.5-.6.7-.9 1.7-.2 3 1 2 2.4 3.5 4.5 4.5.6.3 1.2.5 1.7.4.5-.1 1.3-.6 1.5-1.3.1-.3 0-.6-.1-.7l-1.3-.7c-.3-.2-.6-.2-.8.1l-.4.5c-.1.1-.2.2-.5 0a6.4 6.4 0 0 1-2.2-1.7c-.4-.4-.6-.8-.6-1 .1-.1.2-.3.3-.4.2-.2.2-.5.1-.7l-.7-1.2c-.2-.3-.4-.4-.6-.4Z"/></svg>
+            <div>
+              <p class="contact-label">WhatsApp terapias</p>
+              <a class="contact-value" href="https://wa.me/5491160234233?text=Hola!%20Quiero%20consultar%20por%20un%20turno%20de%20terapias." target="_blank" rel="noopener" aria-label="Consultar turnos de terapias por WhatsApp">+54 9 11 6023-4233</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1"/><path d="M4 7l8 6 8-6"/></svg>
+            <div>
+              <p class="contact-label">Email</p>
+              <a class="contact-value" href="mailto:estudioyogabuenosaires@gmail.com">estudioyogabuenosaires@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg>
+            <div>
+              <p class="contact-label">Instagram</p>
+              <a class="contact-value" href="https://www.instagram.com/yogabuenosaires/" target="_blank" rel="noopener">@yogabuenosaires</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <div>
+              <p class="contact-label">Sedes</p>
+              <p class="contact-value contact-value--stacked">
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=Gasc%C3%B3n%2050%2C%20Almagro%2C%20CABA" target="_blank" rel="noopener">Gascón 50, Almagro</a>
+                <a href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%ADaz%20V%C3%A9lez%204720%2C%20Caballito%2C%20CABA" target="_blank" rel="noopener">Díaz Vélez 4720, Caballito</a>
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="reserva-ctas">
+          <a class="btn btn-primary btn-lg" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">Reservá tu clase</a>
+          <a class="btn btn-ghost-dark" href="https://wa.me/5491160234233?text=Hola!%20Quiero%20consultar%20por%20un%20turno%20de%20terapias." target="_blank" rel="noopener" aria-label="Consultar turnos de terapias por WhatsApp">Turnos de terapias</a>
+        </div>
+
+        <p class="reserva-note">clase de prueba con costo deducible · todas las clases aptas principiantes</p>
+        <!-- CONTENIDO DEMO: redacción de la línea; los hechos son verificados -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-lockup">
+        <!-- CONTENIDO DEMO: logo real del estudio (del sitio actual); pedir archivo en alta resolución para producción -->
+        <img class="footer-logo" src="assets/logo-yba.png" alt="Yoga Buenos Aires" width="120" height="120">
+        <p class="footer-desc">Centro de yoga y bienestar integral con dos sedes: Ashtanga estilo Mysore, más de 22 estilos, terapias, niños y yoga online.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/yogabuenosaires/" target="_blank" rel="noopener" aria-label="Instagram de Yoga Buenos Aires">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="0.7" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <!-- placeholder: confirmar URL de Facebook (presencia verificada; URL estimada para la demo) -->
+          <a href="https://www.facebook.com/yogabuenosaires/" target="_blank" rel="noopener" aria-label="Facebook de Yoga Buenos Aires">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5 20.5v-6h2l.4-2.5h-2.4V10c0-.7.2-1.2 1.3-1.2h1.2V6.5c-.2 0-1-.1-1.8-.1-1.9 0-3.2 1.2-3.2 3.3v1.8H8.5v2.5h2.5v6h2.5Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-col footer-nav" aria-label="Navegación del pie">
+        <ul>
+          <li><a href="#ashtanga">Ashtanga</a></li>
+          <li><a href="#estilos">Estilos</a></li>
+          <li><a href="#sedes">Sedes</a></li>
+          <li><a href="#membresia">Membresía</a></li>
+          <li><a href="#terapias">Terapias</a></li>
+          <li><a href="#ninos">Niños y talleres</a></li>
+          <li><a href="#primera-clase">Primera clase</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col footer-contact">
+        <ul>
+          <li><a href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">WhatsApp clases · +54 9 11 2252-6326</a></li>
+          <li><a href="https://wa.me/5491160234233?text=Hola!%20Quiero%20consultar%20por%20un%20turno%20de%20terapias." target="_blank" rel="noopener" aria-label="Consultar turnos de terapias por WhatsApp">WhatsApp terapias · +54 9 11 6023-4233</a></li>
+          <li><a href="mailto:estudioyogabuenosaires@gmail.com">estudioyogabuenosaires@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/yogabuenosaires/" target="_blank" rel="noopener">@yogabuenosaires</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Gasc%C3%B3n%2050%2C%20Almagro%2C%20CABA" target="_blank" rel="noopener">Gascón 50, Almagro</a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%ADaz%20V%C3%A9lez%204720%2C%20Caballito%2C%20CABA" target="_blank" rel="noopener">Díaz Vélez 4720, Caballito</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-legal">
+      <p>© 2026 Yoga Buenos Aires · Demo comercial — NDZ VISUAL</p>
+      <p class="footer-legal-note">sitio demo — los datos no verificados están marcados como placeholder</p>
+    </div>
+  </footer>
+
+  <!-- ============ FLOATING CTA ============ -->
+  <a class="floating-cta" id="floating-cta" href="https://wa.me/5491122526326?text=Hola%20Yoga%20Buenos%20Aires!%20Quiero%20reservar%20mi%20clase%20de%20prueba.%20%C2%BFMe%20pasan%20los%20horarios%3F" target="_blank" rel="noopener" aria-label="Reservar clase de prueba por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.6a8.4 8.4 0 0 0-7.2 12.6L3.5 20.5l4.4-1.2A8.4 8.4 0 1 0 12 3.6Z"/><path d="M9.1 8.3c-.4 0-.8.1-1.1.5-.6.7-.9 1.7-.2 3 1 2 2.4 3.5 4.5 4.5.6.3 1.2.5 1.7.4.5-.1 1.3-.6 1.5-1.3.1-.3 0-.6-.1-.7l-1.3-.7c-.3-.2-.6-.2-.8.1l-.4.5c-.1.1-.2.2-.5 0a6.4 6.4 0 0 1-2.2-1.7c-.4-.4-.6-.8-.6-1 .1-.1.2-.3.3-.4.2-.2.2-.5.1-.7l-.7-1.2c-.2-.3-.4-.4-.6-.4Z"/></svg>
+    <span class="floating-tip" aria-hidden="true">Reservá tu clase</span>
+  </a>
+</body>
+</html>
